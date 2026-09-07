@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Quiet Truths | The Teacher Mom Edit</title>
+<meta name="description" content="Small reminders about childhood, connection, learning, and the moments that matter." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --cream: #FAF6F1;
+    --oatmeal: #F2EDE4;
+    --sage: #7A8C6E;
+    --dark-bark: #2C2416;
+    --warm-charcoal: #4A3F35;
+    --soft-neutral: #F0EBE4;
+    --terracotta: #C4775A;
+    --terracotta-light: #E8C4B0;
+    --charcoal: #3A3530;
+    --charcoal-mid: #6B6259;
+    --warm-white: #FDFBF8;
+    --serif: 'Cormorant Garamond', Georgia, serif;
+    --sans: 'Jost', system-ui, sans-serif;
+    --radius: 16px;
+    --transition: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--sans);
+    background: var(--cream);
+    color: var(--dark-bark);
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+
+  .container { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--charcoal);
+    color: var(--cream);
+    font-family: var(--sans);
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 14px 28px;
+    border-radius: 100px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background var(--transition), transform 0.2s;
+  }
+  .btn-primary:hover { background: var(--terracotta); transform: translateY(-2px); }
+
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(253, 251, 248, 0.92);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(184, 149, 122, 0.15);
+    padding: 0 24px;
+  }
+  .nav-inner {
+    max-width: 1120px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 68px;
+  }
+  .nav-logo {
+    font-family: var(--serif);
+    font-size: 22px;
+    font-weight: 500;
+    color: var(--charcoal);
+    text-decoration: none;
+    letter-spacing: 0.01em;
+  }
+  .nav-logo span { color: var(--terracotta); }
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    list-style: none;
+  }
+  .nav-links a {
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--charcoal-mid);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover,
+  .nav-links a.active { color: var(--terracotta); }
+  .nav-cta { margin-left: 16px; }
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 4px;
+  }
+  .hamburger span {
+    display: block;
+    width: 22px;
+    height: 1.5px;
+    background: var(--charcoal);
+  }
+  @media (max-width: 768px) {
+    .nav-inner { position: relative; }
+    .nav-links {
+      display: none;
+      position: absolute;
+      top: 68px;
+      left: 0;
+      right: 0;
+      background: var(--warm-white);
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 18px;
+      padding: 20px 24px 24px;
+      border-bottom: 1px solid rgba(44,36,22,0.08);
+    }
+    .nav-links.open { display: flex; }
+    .nav-cta { display: none; }
+    .hamburger { display: flex; }
+  }
+
+  #quiet-truths-root {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0 24px 96px;
+  }
+
+  .qt-intro {
+    text-align: center;
+    padding: 72px 12px 20px;
+    max-width: 640px;
+    margin: 0 auto;
+  }
+  .qt-intro h1 {
+    font-family: var(--serif);
+    font-size: clamp(2.4rem, 5vw, 3.6rem);
+    font-weight: 400;
+    line-height: 1.15;
+    color: var(--dark-bark);
+    margin-bottom: 18px;
+  }
+  .qt-intro p {
+    font-family: var(--sans);
+    font-size: 1.02rem;
+    font-weight: 300;
+    color: var(--warm-charcoal);
+    max-width: 460px;
+    margin: 0 auto;
+    line-height: 1.7;
+  }
+
+  .qt-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 18px;
+    row-gap: 36px;
+    padding-top: 28px;
+  }
+  .qt-grid-item {
+    flex: 0 1 calc((100% - 54px) / 4);
+    max-width: calc((100% - 54px) / 4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+  .qt-grid-cat {
+    font-family: var(--sans);
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--warm-charcoal);
+    line-height: 1.3;
+    min-height: 1.3em;
+    width: 100%;
+    text-align: center;
+  }
+  .qt-grid-card {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    text-align: center;
+    padding: 28px 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease;
+  }
+  .qt-grid-card:hover { transform: translateY(-4px); }
+  .qt-grid-title {
+    font-family: var(--serif);
+    font-size: clamp(0.78rem, 1.1vw, 0.95rem);
+    font-weight: 400;
+    line-height: 1.28;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    margin: 0;
+    text-align: center;
+  }
+  .qt-grid-card .qt-cover-arrow {
+    position: absolute;
+    right: 16px;
+    bottom: 14px;
+    font-size: 0.85rem;
+    opacity: 0.75;
+  }
+
+  .qt-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 400;
+    background: #2C2416;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 28px 16px;
+  }
+  .qt-overlay[hidden] { display: none; }
+  .qt-overlay-inner {
+    position: relative;
+    width: min(560px, 100%);
+  }
+  .qt-overlay-close {
+    position: absolute;
+    top: -44px;
+    right: 0;
+    width: 36px;
+    height: 36px;
+    border: none;
+    border-radius: 50%;
+    background: var(--cream);
+    color: var(--dark-bark);
+    font-size: 16px;
+    cursor: pointer;
+  }
+  .qt-overlay .qt-carousel { width: 100%; }
+  .qt-overlay .qt-arrow {
+    color: var(--cream);
+    border-color: rgba(250, 246, 241, 0.35);
+    background: transparent;
+  }
+  .qt-overlay .qt-arrow:hover:not(:disabled) { border-color: rgba(250, 246, 241, 0.8); }
+
+  .qt-carousel { width: min(560px, 100%); }
+  .qt-viewport {
+    position: relative;
+    overflow: hidden;
+    border-radius: 16px;
+  }
+  .qt-track {
+    display: flex;
+    gap: 0;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-x: contain;
+    scrollbar-width: none;
+    touch-action: pan-x;
+  }
+  .qt-track::-webkit-scrollbar { display: none; }
+
+  .qt-slide {
+    flex: 0 0 100%;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    scroll-snap-align: start;
+    border-radius: 0;
+    box-shadow: none;
+    display: flex;
+  }
+  .qt-slide-inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 48px 40px 64px;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+  }
+
+  .qt-label {
+    display: block;
+    font-family: var(--sans);
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    margin-bottom: 22px;
+    opacity: 0.7;
+    text-align: center;
+  }
+  .qt-cover-title {
+    font-family: var(--serif);
+    font-size: clamp(1.45rem, 2.8vw, 1.95rem);
+    font-weight: 400;
+    line-height: 1.22;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    margin-bottom: 0;
+    text-align: center;
+  }
+  .qt-cover-arrow {
+    font-family: var(--sans);
+    font-size: 0.95rem;
+    letter-spacing: 0.12em;
+    opacity: 0.7;
+    position: absolute;
+    right: 28px;
+    bottom: 24px;
+  }
+
+  .qt-quote-text {
+    font-family: var(--serif);
+    font-weight: 400;
+    line-height: 1.45;
+    text-align: center;
+  }
+  .qt-quote-text p + p { margin-top: 0.9em; }
+  .qt-quote-text em,
+  .qt-cover-title em,
+  .qt-grid-title em,
+  .qt-closing-line em {
+    font-family: var(--serif);
+    font-style: italic;
+    font-weight: 400;
+    text-transform: none;
+    letter-spacing: 0;
+  }
+  .qt-quote-lg .qt-quote-text { font-size: clamp(1.65rem, 3vw, 2.1rem); }
+  .qt-quote-md .qt-quote-text { font-size: clamp(1.38rem, 2.5vw, 1.75rem); }
+  .qt-quote-sm .qt-quote-text { font-size: clamp(1.16rem, 2.1vw, 1.42rem); }
+
+  .qt-closing-line {
+    font-family: var(--serif);
+    font-size: clamp(1.35rem, 2.4vw, 1.7rem);
+    font-weight: 400;
+    line-height: 1.4;
+    margin-bottom: 28px;
+    text-align: center;
+  }
+  .qt-closing-link {
+    font-family: var(--sans);
+    font-size: 0.84rem;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(250, 246, 241, 0.4);
+    padding-bottom: 2px;
+    width: fit-content;
+    opacity: 0.9;
+    margin: 0 auto;
+  }
+  .qt-closing-link:hover { border-bottom-color: currentColor; }
+
+  .qt-dots {
+    position: absolute;
+    left: 50%;
+    bottom: 14px;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    z-index: 2;
+  }
+  .qt-dot {
+    width: 18px;
+    height: 18px;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    background: transparent;
+    cursor: pointer;
+    flex-shrink: 0;
+    position: relative;
+  }
+  .qt-dot::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: rgba(250, 246, 241, 0.38);
+    transform: translate(-50%, -50%);
+    transition: background 0.2s ease, transform 0.2s ease;
+  }
+  .qt-dot.is-active::after {
+    background: #FAF6F1;
+    transform: translate(-50%, -50%) scale(1.2);
+  }
+  .qt-dot:hover::after { background: rgba(250, 246, 241, 0.7); }
+  .qt-dot.is-active:hover::after { background: #FAF6F1; }
+
+  .qt-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 22px;
+    margin-top: 18px;
+  }
+  .qt-arrow {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1px solid rgba(44, 36, 22, 0.16);
+    background: transparent;
+    color: var(--dark-bark);
+    font-family: var(--sans);
+    font-size: 15px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.2s ease, border-color 0.2s ease;
+  }
+  .qt-arrow:hover:not(:disabled) { border-color: rgba(44, 36, 22, 0.4); }
+  .qt-arrow:disabled { opacity: 0.28; cursor: default; }
+
+  footer {
+    background: var(--charcoal);
+    color: var(--cream);
+    padding: 72px 24px 36px;
+  }
+  .footer-inner { max-width: 1120px; margin: 0 auto; }
+  .footer-top {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 48px;
+    padding-bottom: 48px;
+    border-bottom: 1px solid rgba(250,247,242,0.1);
+    margin-bottom: 36px;
+  }
+  .footer-brand-name {
+    font-family: var(--serif);
+    font-size: 24px;
+    font-weight: 400;
+    color: var(--cream);
+    margin-bottom: 12px;
+  }
+  .footer-brand-name span { color: #E8C4B0; }
+  .footer-tagline { font-size: 14px; font-weight: 300; color: rgba(250,247,242,0.6); line-height: 1.65; margin-bottom: 24px; }
+  .footer-social { display: flex; gap: 12px; }
+  .footer-social a {
+    width: 38px; height: 38px;
+    border-radius: 50%;
+    border: 1px solid rgba(250,247,242,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    text-decoration: none;
+    transition: all 0.2s;
+  }
+  .footer-col-title {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(250,247,242,0.5);
+    margin-bottom: 20px;
+  }
+  .footer-links { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+  .footer-links a {
+    font-size: 14px;
+    font-weight: 300;
+    color: rgba(250,247,242,0.7);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .footer-links a:hover { color: var(--cream); }
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .footer-copy { font-size: 13px; font-weight: 300; color: rgba(250,247,242,0.4); }
+  .footer-legal { display: flex; gap: 20px; }
+  .footer-legal a { font-size: 13px; font-weight: 300; color: rgba(250,247,242,0.4); text-decoration: none; }
+
+  @media (max-width: 900px) {
+    .qt-grid-item {
+      flex: 0 1 calc((100% - 18px) / 2);
+      max-width: calc((100% - 18px) / 2);
+    }
+    .qt-grid-card { padding: 22px 16px; }
+    .qt-grid-title { font-size: 0.82rem; }
+  }
+  @media (max-width: 768px) {
+    .qt-intro { padding: 56px 0 8px; }
+    .qt-slide-inner { padding: 36px 28px 56px; }
+    .qt-arrow { width: 32px; height: 32px; }
+    .qt-overlay {
+      padding: 72px 0 28px;
+    }
+    .qt-overlay-inner,
+    .qt-overlay .qt-carousel {
+      width: 100%;
+    }
+    .qt-overlay-close {
+      top: -52px;
+      right: 16px;
+    }
+    .qt-viewport {
+      border-radius: 0;
+      width: 100%;
+    }
+    .qt-controls { margin-top: 20px; }
+    .footer-top { grid-template-columns: 1fr 1fr; gap: 32px; }
+    .footer-top > *:first-child { grid-column: 1 / -1; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .qt-track { scroll-behavior: auto; }
+    .qt-grid-card:hover { transform: none; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="teacher-mom-edit (3).html" class="nav-logo">The Teacher Mom <span>Edit</span></a>
+    <ul class="nav-links">
+      <li><a href="about.html">About</a></li>
+      <li><a href="teacher-mom-edit (3).html#systems">Systems</a></li>
+      <li><a href="quiet-truths.html" class="active">Quiet Truths</a></li>
+      <li><a href="teacher-mom-edit (3).html#shop">Shop</a></li>
+      <li><a href="favorites.html">Favorites</a></li>
+      <li><a href="blog/index.html">Blog</a></li>
+      <li><a href="freebies.html">Freebies</a></li>
+    </ul>
+    <a href="freebies.html" class="btn-primary nav-cta">Free Guide</a>
+    <button class="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<main id="quiet-truths-root"></main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand-name">The Teacher Mom <span>Edit</span></div>
+        <p class="footer-tagline">Calm systems for busy moms. Teacher-approved tools, mom-tested routines, and honest product recommendations — because your home deserves to breathe again.</p>
+      </div>
+      <div>
+        <div class="footer-col-title">Explore</div>
+        <ul class="footer-links">
+          <li><a href="teacher-mom-edit (3).html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="quiet-truths.html">Quiet Truths</a></li>
+          <li><a href="blog/index.html">Blog</a></li>
+          <li><a href="freebies.html">Freebies</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Shop</div>
+        <ul class="footer-links">
+          <li><a href="#">Quiet Time Kit</a></li>
+          <li><a href="#">After-School Routine</a></li>
+          <li><a href="#">Mom Reset Guide</a></li>
+          <li><a href="#">Toddler Toolkit</a></li>
+          <li><a href="#">All Products</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Blog</div>
+        <ul class="footer-links">
+          <li><a href="#">Mom Hacks</a></li>
+          <li><a href="#">Toddler Life</a></li>
+          <li><a href="#">Home Systems</a></li>
+          <li><a href="#">Teacher Tips</a></li>
+          <li><a href="#">Product Reviews</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2026 The Teacher Mom Edit. Made with love and a strong cup of tea.</p>
+      <div class="footer-legal">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Disclaimer</a>
+        <a href="disclosure.html">Affiliate Disclosure</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="quiet-truths.js"></script>
+</body>
+</html>

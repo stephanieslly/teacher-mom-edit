@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>My Story | The Teacher Mom Edit</title>
+<meta name="description" content="Meet Stephanie — classroom teacher, instructional coach, and mom of two. The story behind Teacher Mom Edit." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --cream: #FAF7F2;
+    --oatmeal: #F2EDE4;
+    --sand: #E8DFD0;
+    --sage: #8FA68A;
+    --sage-light: #C5D5C0;
+    --sage-dark: #5C7A58;
+    --terracotta: #C4775A;
+    --terracotta-light: #E8C4B0;
+    --charcoal: #3A3530;
+    --charcoal-mid: #6B6259;
+    --charcoal-light: #9B9189;
+    --warm-white: #FDFBF8;
+    --serif: 'Cormorant Garamond', Georgia, serif;
+    --sans: 'Jost', system-ui, sans-serif;
+    --radius: 16px;
+    --transition: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--sans);
+    background: var(--warm-white);
+    color: var(--charcoal);
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+
+  .container { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+  .tag {
+    display: inline-block;
+    font-family: var(--sans);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--terracotta);
+    margin-bottom: 14px;
+  }
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--charcoal);
+    color: var(--cream);
+    font-family: var(--sans);
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 14px 28px;
+    border-radius: 100px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background var(--transition), transform 0.2s;
+  }
+  .btn-primary:hover { background: var(--terracotta); transform: translateY(-2px); }
+
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(253, 251, 248, 0.92);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(184, 149, 122, 0.15);
+    padding: 0 24px;
+  }
+  .nav-inner {
+    max-width: 1120px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 68px;
+  }
+  .nav-logo {
+    font-family: var(--serif);
+    font-size: 22px;
+    font-weight: 500;
+    color: var(--charcoal);
+    text-decoration: none;
+    letter-spacing: 0.01em;
+  }
+  .nav-logo span { color: var(--terracotta); }
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    list-style: none;
+  }
+  .nav-links a {
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--charcoal-mid);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover,
+  .nav-links a.active { color: var(--terracotta); }
+  .nav-cta { margin-left: 16px; }
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 4px;
+  }
+  .hamburger span {
+    display: block;
+    width: 22px;
+    height: 1.5px;
+    background: var(--charcoal);
+  }
+  @media (max-width: 768px) {
+    .nav-links, .nav-cta { display: none; }
+    .hamburger { display: flex; }
+  }
+
+  .story-page {
+    background: var(--cream);
+    position: relative;
+    overflow: hidden;
+  }
+  .story-page::before {
+    content: '';
+    position: absolute;
+    top: -120px;
+    right: -100px;
+    width: 480px;
+    height: 480px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(197,213,192,0.3) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .story-page::after {
+    content: '';
+    position: absolute;
+    bottom: 80px;
+    left: -80px;
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(196,119,90,0.1) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .story-hero {
+    padding: 72px 0 100px;
+    position: relative;
+    z-index: 1;
+  }
+  .story-grid {
+    display: grid;
+    grid-template-columns: minmax(260px, 380px) 1fr;
+    gap: 64px;
+    align-items: start;
+  }
+  .story-photo-wrap {
+    position: sticky;
+    top: 92px;
+    border-radius: var(--radius);
+  }
+  .story-photo-bg {
+    width: 100%;
+    aspect-ratio: 4/5;
+    border-radius: 16px;
+    background: var(--oatmeal);
+    position: relative;
+    overflow: hidden;
+  }
+  .story-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    border-radius: 16px;
+  }
+  .story-photo-overlay {
+    position: absolute;
+    inset: 0;
+    border-radius: 16px;
+    background: rgba(196, 119, 90, 0.05);
+    pointer-events: none;
+  }
+  .story-copy { min-width: 0; }
+  .story-headline {
+    font-family: var(--serif);
+    font-size: clamp(2.6rem, 5vw, 4rem);
+    font-weight: 300;
+    line-height: 1.1;
+    color: var(--charcoal);
+    margin-bottom: 28px;
+  }
+
+  .story-prose {
+    max-width: none;
+    margin: 0;
+  }
+  .story-prose p {
+    font-size: 17px;
+    font-weight: 300;
+    color: var(--charcoal-mid);
+    line-height: 1.85;
+    margin-bottom: 1.35em;
+  }
+  .story-prose p:last-child { margin-bottom: 0; }
+  .story-prose p.story-emphasis {
+    font-family: var(--serif);
+    font-size: 1.35rem;
+    font-weight: 400;
+    font-style: italic;
+    color: var(--charcoal);
+    line-height: 1.5;
+    border-left: 3px solid var(--terracotta-light);
+    padding-left: 20px;
+    margin: 2em 0;
+  }
+  .story-cta {
+    text-align: left;
+    margin-top: 40px;
+    padding-top: 36px;
+    border-top: 1px solid var(--sand);
+  }
+
+  footer {
+    background: var(--charcoal);
+    color: var(--cream);
+    padding: 72px 24px 36px;
+  }
+  .footer-inner { max-width: 1120px; margin: 0 auto; }
+  .footer-top {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 48px;
+    padding-bottom: 48px;
+    border-bottom: 1px solid rgba(250,247,242,0.1);
+    margin-bottom: 36px;
+  }
+  .footer-brand-name {
+    font-family: var(--serif);
+    font-size: 24px;
+    font-weight: 400;
+    color: var(--cream);
+    margin-bottom: 12px;
+  }
+  .footer-brand-name span { color: var(--terracotta-light); }
+  .footer-tagline { font-size: 14px; font-weight: 300; color: rgba(250,247,242,0.6); line-height: 1.65; margin-bottom: 24px; }
+  .footer-social { display: flex; gap: 12px; }
+  .footer-social a {
+    width: 38px; height: 38px;
+    border-radius: 50%;
+    border: 1px solid rgba(250,247,242,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    text-decoration: none;
+    transition: all 0.2s;
+  }
+  .footer-social a:hover { border-color: var(--terracotta-light); background: rgba(196,119,90,0.15); }
+  .footer-col-title {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(250,247,242,0.5);
+    margin-bottom: 20px;
+  }
+  .footer-links { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+  .footer-links a {
+    font-size: 14px;
+    font-weight: 300;
+    color: rgba(250,247,242,0.7);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .footer-links a:hover { color: var(--cream); }
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .footer-copy { font-size: 13px; font-weight: 300; color: rgba(250,247,242,0.4); }
+  .footer-legal { display: flex; gap: 20px; }
+  .footer-legal a { font-size: 13px; font-weight: 300; color: rgba(250,247,242,0.4); text-decoration: none; transition: color 0.2s; }
+  .footer-legal a:hover { color: rgba(250,247,242,0.8); }
+
+  @media (max-width: 768px) {
+    .story-hero { padding: 48px 0 40px; }
+    .story-grid {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+    .story-photo-wrap { max-width: 320px; margin: 0 auto; width: 100%; position: relative; top: auto; }
+    .story-headline { text-align: center; }
+    .story-grid .tag { display: block; text-align: center; }
+    .story-cta { text-align: center; }
+    .footer-top { grid-template-columns: 1fr 1fr; gap: 32px; }
+    .footer-top > *:first-child { grid-column: 1 / -1; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="teacher-mom-edit (3).html" class="nav-logo">The Teacher Mom <span>Edit</span></a>
+    <ul class="nav-links">
+      <li><a href="about.html" class="active">About</a></li>
+      <li><a href="teacher-mom-edit (3).html#systems">Systems</a></li>
+      <li><a href="quiet-truths.html">Quiet Truths</a></li>
+      <li><a href="teacher-mom-edit (3).html#shop">Shop</a></li>
+      <li><a href="favorites.html">Favorites</a></li>
+      <li><a href="blog/index.html">Blog</a></li>
+      <li><a href="freebies.html">Freebies</a></li>
+    </ul>
+    <a href="teacher-mom-edit (3).html#freebies" class="btn-primary nav-cta">Free Guide</a>
+    <button class="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<main class="story-page">
+  <section class="story-hero">
+    <div class="container story-grid">
+      <div class="story-photo-wrap">
+        <div class="story-photo-bg">
+          <img src="stephanie.jpg" alt="Stephanie — The Teacher Mom Edit" class="story-photo" width="400" height="500" />
+          <div class="story-photo-overlay" aria-hidden="true"></div>
+        </div>
+      </div>
+      <div class="story-copy">
+        <span class="tag">My Story</span>
+        <h1 class="story-headline">Hi, I'm Stephanie.</h1>
+        <div class="story-prose">
+          <p>I'm a mom of two, a classroom teacher, and a former instructional coach.</p>
+
+          <p>Before becoming a mom, I spent years learning how children learn best. I supported students, worked alongside teachers, and saw how much the right routine, environment, or simple tool could help a child feel more confident, capable, and secure.</p>
+
+          <p>Then I became a mom myself, and that perspective changed.</p>
+
+          <p>Everything I knew as an educator suddenly had to fit into family life — mornings at home, after-school transitions, meals, play, routines, growing independence, and all the small moments that shape a child's day.</p>
+
+          <p>Now, as a classroom teacher and mom of two, I'm in a season of balancing work, family, home, and all the little pieces in between. It has made me appreciate simple systems more than ever.</p>
+
+          <p>Not systems that make life perfect.</p>
+
+          <p>Systems that make it feel a little calmer.</p>
+
+          <p>A morning routine that helps everyone know what comes next. A home setup that makes things easier to put away. A simple activity that keeps little hands busy. A few minutes of preparation that makes tomorrow run more smoothly. A product that genuinely earns its place in our home.</p>
+
+          <p>That's why I created Teacher Mom Edit.</p>
+
+          <p>This is where my experience as an educator meets my everyday life as a mom. I share practical routines, thoughtful home systems, simple learning ideas, useful printables, and carefully chosen products that help family life feel more manageable.</p>
+
+          <p>Everything here is designed with two things in mind: what supports children, and what is realistic for the person caring for them.</p>
+
+          <p>I believe children thrive with connection, predictability, and opportunities to become more independent.</p>
+
+          <p>I believe learning can happen naturally through everyday life.</p>
+
+          <p>I believe a home can feel calm without being perfectly organized.</p>
+
+          <p>And I believe the best systems are often the simplest ones — the ones that quietly make the day run a little better.</p>
+
+          <p>Teacher Mom Edit is for moms balancing work, family, home, and everything that comes with raising children, while still wanting to be present for the moments that matter.</p>
+
+          <p>You don't need to do more.</p>
+
+          <p>Sometimes you just need a simpler way to do what you're already doing.</p>
+
+          <p>That's what I hope you find here.</p>
+
+          <p class="story-emphasis">Welcome to Teacher Mom Edit — teacher-informed, mom-tested, and made for a little less chaos and a little more calm.</p>
+
+          <div class="story-cta">
+            <a href="teacher-mom-edit (3).html" class="btn-primary">Browse the Edit →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand-name">The Teacher Mom <span>Edit</span></div>
+        <p class="footer-tagline">Calm systems for busy moms. Teacher-approved tools, mom-tested routines, and honest product recommendations — because your home deserves to breathe again.</p>
+        <div class="footer-social">
+          <a href="https://instagram.com/teachermomedit" target="_blank" title="Instagram">📸</a>
+          <a href="https://tiktok.com/@teachermomedit" target="_blank" title="TikTok">🎵</a>
+          <a href="#">📌</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Explore</div>
+        <ul class="footer-links">
+          <li><a href="teacher-mom-edit (3).html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="blog/index.html">Blog</a></li>
+          <li><a href="freebies.html">Freebies</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Shop</div>
+        <ul class="footer-links">
+          <li><a href="#">Quiet Time Kit</a></li>
+          <li><a href="#">After-School Routine</a></li>
+          <li><a href="#">Mom Reset Guide</a></li>
+          <li><a href="#">Toddler Toolkit</a></li>
+          <li><a href="#">All Products</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Blog</div>
+        <ul class="footer-links">
+          <li><a href="#">Mom Hacks</a></li>
+          <li><a href="#">Toddler Life</a></li>
+          <li><a href="#">Home Systems</a></li>
+          <li><a href="#">Teacher Tips</a></li>
+          <li><a href="#">Product Reviews</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2025 The Teacher Mom Edit. Made with love and a strong cup of tea.</p>
+      <div class="footer-legal">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Disclaimer</a>
+        <a href="disclosure.html">Affiliate Disclosure</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

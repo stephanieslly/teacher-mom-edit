@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Blog | The Teacher Mom Edit</title>
+<meta name="description" content="Teacher-approved tips, mom hacks, and calm parenting reads for busy families." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --cream: #FAF7F2;
+    --oatmeal: #F2EDE4;
+    --sand: #E8DFD0;
+    --sage: #8FA68A;
+    --sage-light: #C5D5C0;
+    --sage-dark: #5C7A58;
+    --terracotta: #C4775A;
+    --terracotta-light: #E8C4B0;
+    --charcoal: #3A3530;
+    --charcoal-mid: #6B6259;
+    --charcoal-light: #9B9189;
+    --warm-white: #FDFBF8;
+    --serif: 'Cormorant Garamond', Georgia, serif;
+    --sans: 'Jost', system-ui, sans-serif;
+    --radius: 16px;
+    --transition: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--sans);
+    background: var(--warm-white);
+    color: var(--charcoal);
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+
+  .container { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+  .tag {
+    display: inline-block;
+    font-family: var(--sans);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--terracotta);
+    margin-bottom: 14px;
+  }
+  .section-title {
+    font-family: var(--serif);
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    font-weight: 400;
+    line-height: 1.2;
+    color: var(--charcoal);
+  }
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--charcoal);
+    color: var(--cream);
+    font-family: var(--sans);
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 14px 28px;
+    border-radius: 100px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background var(--transition), transform 0.2s;
+  }
+  .btn-primary:hover { background: var(--terracotta); transform: translateY(-2px); }
+
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(253, 251, 248, 0.92);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(184, 149, 122, 0.15);
+    padding: 0 24px;
+  }
+  .nav-inner {
+    max-width: 1120px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 68px;
+  }
+  .nav-logo {
+    font-family: var(--serif);
+    font-size: 22px;
+    font-weight: 500;
+    color: var(--charcoal);
+    text-decoration: none;
+    letter-spacing: 0.01em;
+  }
+  .nav-logo span { color: var(--terracotta); }
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    list-style: none;
+  }
+  .nav-links a {
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--charcoal-mid);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover,
+  .nav-links a.active { color: var(--terracotta); }
+  .nav-cta { margin-left: 16px; }
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 4px;
+  }
+  .hamburger span {
+    display: block;
+    width: 22px;
+    height: 1.5px;
+    background: var(--charcoal);
+  }
+  @media (max-width: 768px) {
+    .nav-links, .nav-cta { display: none; }
+    .hamburger { display: flex; }
+  }
+
+  .blog-section {
+    padding: 100px 0;
+    background: var(--cream);
+  }
+  .blog-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 48px;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .categories-row {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 36px;
+  }
+  .cat-btn {
+    padding: 8px 18px;
+    border-radius: 100px;
+    border: 1.5px solid var(--sand);
+    background: transparent;
+    font-family: var(--sans);
+    font-size: 13px;
+    font-weight: 400;
+    color: var(--charcoal-mid);
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .cat-btn.active, .cat-btn:hover {
+    background: var(--charcoal);
+    color: var(--cream);
+    border-color: var(--charcoal);
+  }
+  .blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+  }
+  .blog-card {
+    background: var(--warm-white);
+    border-radius: var(--radius);
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    transition: transform var(--transition), box-shadow var(--transition);
+  }
+  .blog-card.is-hidden { display: none; }
+  .blog-card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(58,53,48,0.09); }
+  .blog-thumb {
+    height: 200px;
+    overflow: hidden;
+    background: var(--oatmeal);
+  }
+  .blog-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .blog-thumb-2 { background: #E8EDE4; }
+  .blog-thumb-3 { background: #EDE8E0; }
+  .blog-info { padding: 24px; }
+  .blog-cat {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--terracotta);
+    margin-bottom: 8px;
+    display: block;
+  }
+  .blog-title {
+    font-family: var(--serif);
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: var(--charcoal);
+    line-height: 1.3;
+    margin-bottom: 10px;
+  }
+  .blog-excerpt { font-size: 14px; font-weight: 300; color: var(--charcoal-mid); line-height: 1.65; }
+  .blog-meta {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 16px;
+    font-size: 12px;
+    color: var(--charcoal-light);
+    font-weight: 300;
+  }
+  .blog-meta span { width: 3px; height: 3px; border-radius: 50%; background: var(--charcoal-light); }
+
+  .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s ease; }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+  .reveal-d1 { transition-delay: 0.1s; }
+  .reveal-d2 { transition-delay: 0.2s; }
+  .reveal-d3 { transition-delay: 0.3s; }
+  .reveal-d4 { transition-delay: 0.4s; }
+  .reveal-d5 { transition-delay: 0.5s; }
+
+  footer {
+    background: var(--charcoal);
+    color: var(--cream);
+    padding: 72px 24px 36px;
+  }
+  .footer-inner { max-width: 1120px; margin: 0 auto; }
+  .footer-top {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 48px;
+    padding-bottom: 48px;
+    border-bottom: 1px solid rgba(250,247,242,0.1);
+    margin-bottom: 36px;
+  }
+  .footer-brand-name {
+    font-family: var(--serif);
+    font-size: 24px;
+    font-weight: 400;
+    color: var(--cream);
+    margin-bottom: 12px;
+  }
+  .footer-brand-name span { color: var(--terracotta-light); }
+  .footer-tagline { font-size: 14px; font-weight: 300; color: rgba(250,247,242,0.6); line-height: 1.65; margin-bottom: 24px; }
+  .footer-social { display: flex; gap: 12px; }
+  .footer-social a {
+    width: 38px; height: 38px;
+    border-radius: 50%;
+    border: 1px solid rgba(250,247,242,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    text-decoration: none;
+    transition: all 0.2s;
+  }
+  .footer-social a:hover { border-color: var(--terracotta-light); background: rgba(196,119,90,0.15); }
+  .footer-col-title {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(250,247,242,0.5);
+    margin-bottom: 20px;
+  }
+  .footer-links { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+  .footer-links a {
+    font-size: 14px;
+    font-weight: 300;
+    color: rgba(250,247,242,0.7);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .footer-links a:hover { color: var(--cream); }
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .footer-copy { font-size: 13px; font-weight: 300; color: rgba(250,247,242,0.4); }
+  .footer-legal { display: flex; gap: 20px; }
+  .footer-legal a { font-size: 13px; font-weight: 300; color: rgba(250,247,242,0.4); text-decoration: none; transition: color 0.2s; }
+  .footer-legal a:hover { color: rgba(250,247,242,0.8); }
+
+  @media (max-width: 768px) {
+    .footer-top { grid-template-columns: 1fr 1fr; gap: 32px; }
+    .footer-top > *:first-child { grid-column: 1 / -1; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="../teacher-mom-edit (3).html" class="nav-logo">The Teacher Mom <span>Edit</span></a>
+    <ul class="nav-links">
+      <li><a href="../about.html">About</a></li>
+      <li><a href="../teacher-mom-edit (3).html#systems">Systems</a></li>
+      <li><a href="../quiet-truths.html">Quiet Truths</a></li>
+      <li><a href="../teacher-mom-edit (3).html#shop">Shop</a></li>
+      <li><a href="../favorites.html">Favorites</a></li>
+      <li><a href="index.html" class="active">Blog</a></li>
+      <li><a href="../freebies.html">Freebies</a></li>
+    </ul>
+    <a href="../teacher-mom-edit (3).html#freebies" class="btn-primary nav-cta">Free Guide</a>
+    <button class="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<section class="blog-section" id="blog">
+  <div class="container">
+    <div class="blog-header">
+      <div class="reveal">
+        <span class="tag">From the Blog</span>
+        <h1 class="section-title">Reads for the real-life mom</h1>
+      </div>
+    </div>
+    <div class="categories-row reveal">
+      <button type="button" class="cat-btn active" data-filter="All">All</button>
+      <button type="button" class="cat-btn" data-filter="Mom Hacks">Mom Hacks</button>
+      <button type="button" class="cat-btn" data-filter="Toddler Life">Toddler Life</button>
+      <button type="button" class="cat-btn" data-filter="Home Systems">Home Systems</button>
+      <button type="button" class="cat-btn" data-filter="Teacher Tips">Teacher Tips</button>
+      <button type="button" class="cat-btn" data-filter="Product Reviews">Product Reviews</button>
+      <button type="button" class="cat-btn" data-filter="Calm Parenting">Calm Parenting</button>
+    </div>
+    <div class="blog-grid">
+      <a href="../blog-worst-behaviour.html" class="blog-card reveal reveal-d1" data-category="Calm Parenting">
+        <div class="blog-thumb blog-thumb-3"><img src="../premium_photo-1723629808873-55f447f35138.avif" alt="Why Your Child Saves Their Worst Behaviour for You" /></div>
+        <div class="blog-info">
+          <span class="blog-cat">Calm Parenting</span>
+          <h3 class="blog-title">Why Your Child Saves Their Worst Behaviour for You</h3>
+          <p class="blog-excerpt">It's not a bad sign. It's actually the opposite.</p>
+          <div class="blog-meta">2 min read <span></span> Calm Parenting</div>
+        </div>
+      </a>
+      <a href="../blog-drop-zone.html" class="blog-card reveal reveal-d2" data-category="Home Systems">
+        <div class="blog-thumb"><img src="../istockphoto-1446556818-612x612.webp" alt="The Drop Zone Every Family Needs by the Front Door" /></div>
+        <div class="blog-info">
+          <span class="blog-cat">Home Systems</span>
+          <h3 class="blog-title">The Drop Zone Every Family Needs by the Front Door</h3>
+          <p class="blog-excerpt">One simple system that ends the morning hunt for shoes, bags, and everything else.</p>
+          <div class="blog-meta">2 min read <span></span> Home Systems</div>
+        </div>
+      </a>
+      <a href="../blog-toddler-wants-you.html" class="blog-card reveal reveal-d3" data-category="Toddler Life">
+        <div class="blog-thumb blog-thumb-2"><img src="../premium_photo-1666299837951-a91d4a7f2025.avif" alt="What to Do When Your Toddler Wants You Every 5 Seconds" /></div>
+        <div class="blog-info">
+          <span class="blog-cat">Toddler Life</span>
+          <h3 class="blog-title">What to Do When Your Toddler Wants You Every 5 Seconds</h3>
+          <p class="blog-excerpt">The simple connection trick that makes independent play actually work.</p>
+          <div class="blog-meta">2 min read <span></span> Toddler Life</div>
+        </div>
+      </a>
+      <a href="../blog-transitions.html" class="blog-card reveal reveal-d4" data-category="Teacher Tips">
+        <div class="blog-thumb blog-thumb-3"><img src="../premium_photo-1726812105319-02545df9a60c.avif" alt="What Teachers Know About Transitions (That Most Parents Don't)" /></div>
+        <div class="blog-info">
+          <span class="blog-cat">Teacher Tips</span>
+          <h3 class="blog-title">What Teachers Know About Transitions (That Most Parents Don't)</h3>
+          <p class="blog-excerpt">Transitions look ordinary — but they're one of the hardest parts of a child's day. Here's what teachers do differently.</p>
+          <div class="blog-meta">3 min read <span></span> Teacher Tips</div>
+        </div>
+      </a>
+      <a href="../blog-after-school-meltdowns.html" class="blog-card reveal reveal-d5" data-category="Teacher Tips">
+        <div class="blog-thumb blog-thumb-2"><img src="../premium_photo-1663100091589-3606b27215fc.avif" alt="Why Your Child Melts Down After School — and What Actually Helps" /></div>
+        <div class="blog-info">
+          <span class="blog-cat">Teacher Tips</span>
+          <h3 class="blog-title">Why Your Child Melts Down After School — and What Actually Helps</h3>
+          <p class="blog-excerpt">Your child holds it together all day, then falls apart the second they get home. Here's why it makes sense — and what actually helps.</p>
+          <div class="blog-meta">3 min read <span></span> Teacher Tips</div>
+        </div>
+      </a>
+      <a href="../blog-evening-reset.html" class="blog-card reveal" data-category="Mom Hacks">
+        <div class="blog-thumb"><img src="../photo-1475609471617-0ef53b59cff5.avif" alt="The 10-Minute Evening Reset That Changed My Mornings" /></div>
+        <div class="blog-info">
+          <span class="blog-cat">Mom Hacks</span>
+          <h3 class="blog-title">The 10-Minute Evening Reset That Changed My Mornings</h3>
+          <p class="blog-excerpt">A tiny nightly reset — not a perfect routine — that clears predictable morning stress before you even wake up.</p>
+          <div class="blog-meta">3 min read <span></span> Mom Hacks</div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand-name">The Teacher Mom <span>Edit</span></div>
+        <p class="footer-tagline">Calm systems for busy moms. Teacher-approved tools, mom-tested routines, and honest product recommendations — because your home deserves to breathe again.</p>
+        <div class="footer-social">
+          <a href="https://instagram.com/teachermomedit" target="_blank" title="Instagram">📸</a>
+          <a href="https://tiktok.com/@teachermomedit" target="_blank" title="TikTok">🎵</a>
+          <a href="#">📌</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Explore</div>
+        <ul class="footer-links">
+          <li><a href="../teacher-mom-edit (3).html">Home</a></li>
+          <li><a href="../about.html">About</a></li>
+          <li><a href="index.html">Blog</a></li>
+          <li><a href="../freebies.html">Freebies</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Shop</div>
+        <ul class="footer-links">
+          <li><a href="#">Quiet Time Kit</a></li>
+          <li><a href="#">After-School Routine</a></li>
+          <li><a href="#">Mom Reset Guide</a></li>
+          <li><a href="#">Toddler Toolkit</a></li>
+          <li><a href="#">All Products</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Blog</div>
+        <ul class="footer-links">
+          <li><a href="#">Mom Hacks</a></li>
+          <li><a href="#">Toddler Life</a></li>
+          <li><a href="#">Home Systems</a></li>
+          <li><a href="#">Teacher Tips</a></li>
+          <li><a href="#">Product Reviews</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2025 The Teacher Mom Edit. Made with love and a strong cup of tea.</p>
+      <div class="footer-legal">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Disclaimer</a>
+        <a href="#">Affiliate Disclosure</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  reveals.forEach(function(el) { observer.observe(el); });
+
+  const catBtns = document.querySelectorAll('.cat-btn');
+  const blogCards = document.querySelectorAll('.blog-grid .blog-card');
+
+  function filterBlogPosts(category) {
+    blogCards.forEach(function(card) {
+      if (category === 'All') {
+        card.classList.remove('is-hidden');
+      } else {
+        const cardCat = card.getAttribute('data-category');
+        if (cardCat === category) {
+          card.classList.remove('is-hidden');
+        } else {
+          card.classList.add('is-hidden');
+        }
+      }
+    });
+  }
+
+  catBtns.forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      catBtns.forEach(function(b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+      filterBlogPosts(btn.getAttribute('data-filter'));
+    });
+  });
+
+</script>
+</body>
+</html>

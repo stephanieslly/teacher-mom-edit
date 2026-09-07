@@ -1,0 +1,1898 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>The Teacher Mom Edit | Calm Systems for Busy Moms</title>
+<meta name="description" content="Teacher-approved tools, routines, and systems that help overwhelmed moms simplify home life, reduce chaos, and find calm. By a mom + educator who gets your life." />
+<meta property="og:title" content="The Teacher Mom Edit | Calm Systems for Busy Moms" />
+<meta property="og:description" content="Less chaos. More calm. Tools, routines, and systems that actually work — built by a mom and educator." />
+<meta property="og:type" content="website" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --cream: #FAF7F2;
+    --oatmeal: #F2EDE4;
+    --sand: #E8DFD0;
+    --sage: #8FA68A;
+    --sage-light: #C5D5C0;
+    --sage-dark: #5C7A58;
+    --olive: #7A8C5E;
+    --terracotta: #C4775A;
+    --terracotta-light: #E8C4B0;
+    --clay: #B8957A;
+    --charcoal: #3A3530;
+    --charcoal-mid: #6B6259;
+    --charcoal-light: #9B9189;
+    --warm-white: #FDFBF8;
+    --serif: 'Cormorant Garamond', Georgia, serif;
+    --sans: 'Jost', system-ui, sans-serif;
+    --radius: 16px;
+    --radius-sm: 8px;
+    --transition: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--sans);
+    background: var(--warm-white);
+    color: var(--charcoal);
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+
+  /* ── ANIMATIONS ── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(28px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+  @keyframes shimmer {
+    0%   { background-position: -200% center; }
+    100% { background-position: 200% center; }
+  }
+  @keyframes popIn {
+    0%   { opacity: 0; transform: scale(0.92) translateY(16px); }
+    100% { opacity: 1; transform: scale(1) translateY(0); }
+  }
+
+  .fade-up { animation: fadeUp 0.8s ease both; }
+  .fade-up-d1 { animation-delay: 0.1s; }
+  .fade-up-d2 { animation-delay: 0.2s; }
+  .fade-up-d3 { animation-delay: 0.3s; }
+  .fade-up-d4 { animation-delay: 0.4s; }
+  .fade-up-d5 { animation-delay: 0.5s; }
+
+  /* ── UTILITIES ── */
+  .serif { font-family: var(--serif); }
+  .container { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+  .tag {
+    display: inline-block;
+    font-family: var(--sans);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--terracotta);
+    margin-bottom: 14px;
+  }
+  .section-title {
+    font-family: var(--serif);
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    font-weight: 400;
+    line-height: 1.2;
+    color: var(--charcoal);
+  }
+  .section-sub {
+    font-size: 16px;
+    font-weight: 300;
+    color: var(--charcoal-mid);
+    max-width: 540px;
+    margin-top: 12px;
+  }
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--charcoal);
+    color: var(--cream);
+    font-family: var(--sans);
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 14px 28px;
+    border-radius: 100px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background var(--transition), transform 0.2s;
+  }
+  .btn-primary:hover { background: var(--terracotta); transform: translateY(-2px); }
+  .btn-outline {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: transparent;
+    color: var(--charcoal);
+    font-family: var(--sans);
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 13px 28px;
+    border-radius: 100px;
+    border: 1.5px solid var(--charcoal);
+    cursor: pointer;
+    text-decoration: none;
+    transition: all var(--transition);
+  }
+  .btn-outline:hover { background: var(--charcoal); color: var(--cream); transform: translateY(-2px); }
+  .btn-sage {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--sage);
+    color: #fff;
+    font-family: var(--sans);
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 14px 28px;
+    border-radius: 100px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all var(--transition);
+  }
+  .btn-sage:hover { background: var(--sage-dark); transform: translateY(-2px); }
+
+  /* ── NAV ── */
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(253, 251, 248, 0.92);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(184, 149, 122, 0.15);
+    padding: 0 24px;
+  }
+  .nav-inner {
+    max-width: 1120px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 68px;
+  }
+  .nav-logo {
+    font-family: var(--serif);
+    font-size: 22px;
+    font-weight: 500;
+    color: var(--charcoal);
+    text-decoration: none;
+    letter-spacing: 0.01em;
+  }
+  .nav-logo span { color: var(--terracotta); }
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    list-style: none;
+  }
+  .nav-links a {
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--charcoal-mid);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover,
+  .nav-links a.active { color: var(--terracotta); }
+  .nav-cta { margin-left: 16px; }
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 4px;
+  }
+  .hamburger span {
+    display: block;
+    width: 22px;
+    height: 1.5px;
+    background: var(--charcoal);
+    transition: all 0.3s;
+  }
+  @media (max-width: 768px) {
+    .nav-links, .nav-cta { display: none; }
+    .hamburger { display: flex; }
+  }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: calc(100vh - 68px);
+    background: var(--cream);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 0;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -80px;
+    right: -80px;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(197,213,192,0.35) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: -60px;
+    left: -60px;
+    width: 360px;
+    height: 360px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(196,119,90,0.12) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .hero-text {
+    padding: 80px 60px 80px 0;
+    position: relative;
+    z-index: 1;
+  }
+  .hero-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--oatmeal);
+    border: 1px solid var(--sand);
+    border-radius: 100px;
+    padding: 6px 16px 6px 8px;
+    margin-bottom: 32px;
+  }
+  .hero-eyebrow-dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: var(--sage);
+  }
+  .hero-eyebrow span {
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--charcoal-mid);
+  }
+  .hero-headline {
+    font-family: var(--serif);
+    font-size: clamp(2.8rem, 5vw, 4.8rem);
+    font-weight: 300;
+    line-height: 1.1;
+    color: var(--charcoal);
+    margin-bottom: 8px;
+  }
+  .hero-headline em {
+    font-style: italic;
+    color: var(--terracotta);
+  }
+  .hero-sub {
+    font-size: 17px;
+    font-weight: 300;
+    color: var(--charcoal-mid);
+    line-height: 1.7;
+    max-width: 440px;
+    margin: 20px 0 40px;
+  }
+  .hero-btns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 48px;
+  }
+  .hero-social-proof {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .hero-avatars {
+    display: flex;
+  }
+  .hero-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 2px solid var(--cream);
+    overflow: hidden;
+    margin-left: -10px;
+    background: var(--sand);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--charcoal-mid);
+  }
+  .hero-avatar:first-child { margin-left: 0; }
+  .hero-proof-text { font-size: 13px; color: var(--charcoal-mid); font-weight: 300; }
+  .hero-proof-text strong { color: var(--charcoal); font-weight: 500; }
+  .hero-visual {
+    height: 100%;
+    min-height: calc(100vh - 68px);
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-img-block {
+    width: 100%;
+    height: 100%;
+    background: var(--oatmeal);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .hero-img-placeholder {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  /* SVG placeholder visual */
+  .hero-scene {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    flex-direction: column;
+    gap: 16px;
+  }
+  @media (max-width: 768px) {
+    .hero {
+      grid-template-columns: 1fr;
+      min-height: auto;
+    }
+    .hero-text { padding: 60px 0 40px; order: 2; }
+    .hero-visual { min-height: 340px; order: 1; }
+  }
+
+  /* ── TRUST BAR ── */
+  .trust-bar {
+    background: var(--charcoal);
+    padding: 16px 24px;
+    overflow: hidden;
+  }
+  .trust-bar-inner {
+    display: flex;
+    gap: 48px;
+    animation: scroll-x 20s linear infinite;
+    width: max-content;
+  }
+  @keyframes scroll-x {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+  }
+  .trust-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    white-space: nowrap;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: rgba(250,247,242,0.7);
+  }
+  .trust-dot { width: 4px; height: 4px; border-radius: 50%; background: var(--terracotta); }
+
+  /* ── ABOUT ── */
+  .about {
+    padding: 100px 0;
+    background: var(--warm-white);
+  }
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+  .about-img-wrap {
+    position: relative;
+    border-radius: var(--radius);
+    overflow: visible;
+  }
+  .about-img-bg {
+    width: 100%;
+    aspect-ratio: 4/5;
+    border-radius: var(--radius);
+    background: var(--oatmeal);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .about-badge {
+    position: absolute;
+    bottom: -20px;
+    right: -20px;
+    background: var(--terracotta);
+    color: #fff;
+    border-radius: var(--radius);
+    padding: 18px 20px;
+    font-family: var(--serif);
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.4;
+    box-shadow: 0 8px 24px rgba(196,119,90,0.25);
+    max-width: 160px;
+    text-align: center;
+  }
+  .about-badge strong { display: block; font-size: 28px; font-weight: 600; line-height: 1; margin-bottom: 4px; }
+  .about-content .tag { margin-bottom: 12px; }
+  .about-quote {
+    font-family: var(--serif);
+    font-size: 1.9rem;
+    font-weight: 300;
+    font-style: italic;
+    line-height: 1.35;
+    color: var(--charcoal);
+    margin: 20px 0 28px;
+    border-left: 3px solid var(--terracotta-light);
+    padding-left: 20px;
+  }
+  .about-body { font-size: 16px; font-weight: 300; color: var(--charcoal-mid); line-height: 1.8; }
+  .about-creds {
+    display: flex;
+    gap: 24px;
+    margin-top: 32px;
+    flex-wrap: wrap;
+  }
+  .cred-pill {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--oatmeal);
+    border: 1px solid var(--sand);
+    border-radius: 100px;
+    padding: 8px 16px;
+    font-size: 13px;
+    font-weight: 400;
+    color: var(--charcoal-mid);
+  }
+  .cred-pill-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--sage); }
+  @media (max-width: 768px) {
+    .about-grid { grid-template-columns: 1fr; gap: 48px; }
+    .about-badge { right: 0; }
+  }
+
+  /* ── WHAT I HELP WITH ── */
+  .help-section {
+    padding: 100px 0;
+    background: var(--oatmeal);
+  }
+  .help-header { text-align: center; margin-bottom: 60px; }
+  .help-header .section-sub { margin: 12px auto 0; text-align: center; }
+  .help-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  .help-card {
+    background: var(--warm-white);
+    border-radius: var(--radius);
+    padding: 32px 28px;
+    transition: transform var(--transition), box-shadow var(--transition);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  .help-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: var(--terracotta-light);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform var(--transition);
+  }
+  .help-card:hover { transform: translateY(-6px); box-shadow: 0 20px 48px rgba(58,53,48,0.10); }
+  .help-card:hover::before { transform: scaleX(1); }
+  .help-card-num {
+    display: block;
+    font-family: var(--sans);
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: 0.18em;
+    color: var(--terracotta);
+    margin-bottom: 18px;
+    line-height: 1;
+  }
+  .help-card-title {
+    font-family: var(--serif);
+    font-size: 1.54rem;
+    font-weight: 500;
+    color: var(--charcoal);
+    line-height: 1.25;
+    margin-bottom: 10px;
+  }
+  .help-card-body {
+    font-size: 14px;
+    font-weight: 300;
+    color: var(--charcoal-mid);
+    line-height: 1.7;
+    flex: 1;
+  }
+  .help-card-cta {
+    display: block;
+    margin-top: 22px;
+    font-family: var(--sans);
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--terracotta);
+  }
+  @media (max-width: 900px) {
+    .help-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 640px) {
+    .help-grid { grid-template-columns: 1fr; }
+  }
+
+  /* ── LEAD MAGNET ── */
+  .lead-magnet {
+    padding: 100px 0;
+    background: var(--warm-white);
+  }
+  .lead-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+  .lead-content .section-title { margin: 12px 0 16px; }
+  .lead-list {
+    list-style: none;
+    margin: 24px 0 36px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .lead-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 15px;
+    font-weight: 300;
+    color: var(--charcoal-mid);
+  }
+  .lead-check {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--sage-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 2px;
+    font-size: 11px;
+    color: var(--sage-dark);
+  }
+  .email-form { display: flex; flex-direction: column; gap: 12px; }
+  .email-input {
+    width: 100%;
+    padding: 14px 18px;
+    border: 1.5px solid var(--sand);
+    border-radius: 100px;
+    background: var(--cream);
+    font-family: var(--sans);
+    font-size: 15px;
+    font-weight: 300;
+    color: var(--charcoal);
+    outline: none;
+    transition: border-color 0.2s;
+  }
+  .email-input:focus { border-color: var(--sage); }
+  .email-input::placeholder { color: var(--charcoal-light); }
+  .email-form .btn-primary { width: 100%; justify-content: center; padding: 15px; }
+  .lead-privacy { font-size: 12px; color: var(--charcoal-light); text-align: center; margin-top: 4px; }
+  .lead-visual {
+    background: var(--oatmeal);
+    border-radius: var(--radius);
+    aspect-ratio: 4/5;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .lead-mockup {
+    background: var(--warm-white);
+    border-radius: 12px;
+    width: 72%;
+    box-shadow: 0 24px 64px rgba(58,53,48,0.14);
+    overflow: hidden;
+  }
+  .lead-mockup-top {
+    background: var(--charcoal);
+    padding: 20px 22px 18px;
+  }
+  .lead-mockup-tag { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--terracotta-light); margin-bottom: 6px; }
+  .lead-mockup-title { font-family: var(--serif); font-size: 18px; font-weight: 400; color: var(--cream); line-height: 1.25; }
+  .lead-mockup-body { padding: 20px 22px; }
+  .lead-mockup-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 9px 0;
+    border-bottom: 1px solid var(--sand);
+    font-size: 13px;
+    color: var(--charcoal-mid);
+    font-weight: 300;
+  }
+  .lead-mockup-item:last-child { border-bottom: none; }
+  .lead-mockup-num {
+    width: 22px; height: 22px;
+    border-radius: 50%;
+    background: var(--terracotta-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--terracotta);
+    flex-shrink: 0;
+  }
+  @media (max-width: 768px) {
+    .lead-inner { grid-template-columns: 1fr; gap: 48px; }
+    .lead-visual { display: none; }
+  }
+
+  .free-guides-wrap {
+    margin-top: 72px;
+    padding-top: 72px;
+    border-top: 1px solid var(--sand);
+  }
+  .free-guides-header { text-align: center; max-width: 640px; margin: 0 auto 40px; }
+  .free-guides-header .section-title { font-size: clamp(1.75rem, 3.5vw, 2.4rem); }
+  .free-guides-sub { margin: 12px auto 0; }
+  .free-guides-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+  .free-guide-card {
+    background: var(--oatmeal);
+    border-radius: var(--radius);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(184, 149, 122, 0.2);
+    transition: transform var(--transition), box-shadow var(--transition);
+  }
+  .free-guide-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 48px rgba(58, 53, 48, 0.1);
+  }
+  .free-guide-thumb-wrap {
+    aspect-ratio: 3/4;
+    background: var(--sand);
+    overflow: hidden;
+  }
+  .free-guide-thumb-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    display: block;
+  }
+  .free-guide-body {
+    padding: 22px 22px 24px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 10px;
+  }
+  .free-guide-title {
+    font-family: var(--serif);
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: var(--charcoal);
+    line-height: 1.25;
+  }
+  .free-guide-desc {
+    font-size: 14px;
+    font-weight: 300;
+    color: var(--charcoal-mid);
+    line-height: 1.65;
+    flex: 1;
+    margin-bottom: 6px;
+  }
+  .free-guide-card .btn-sage { width: 100%; justify-content: center; margin-top: 4px; }
+  @media (max-width: 992px) {
+    .free-guides-grid { grid-template-columns: 1fr; max-width: 420px; margin: 0 auto; }
+  }
+
+  /* ── PRODUCTS ── */
+  .products {
+    padding: 100px 0;
+    background: var(--cream);
+  }
+  .products-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 48px;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+  }
+  .product-card {
+    background: var(--warm-white);
+    border-radius: var(--radius);
+    overflow: hidden;
+    transition: transform var(--transition), box-shadow var(--transition);
+    text-decoration: none;
+    color: inherit;
+    display: block;
+  }
+  .product-card:hover { transform: translateY(-6px); box-shadow: 0 20px 48px rgba(58,53,48,0.10); }
+  .product-thumb {
+    aspect-ratio: 4/3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    position: relative;
+  }
+  .product-thumb-1 { background: linear-gradient(135deg, #E8DFD0 0%, #D4C9B8 100%); }
+  .product-thumb-2 { background: linear-gradient(135deg, #C5D5C0 0%, #A8C4A0 100%); }
+  .product-thumb-3 { background: linear-gradient(135deg, #E8C4B0 0%, #D4A088 100%); }
+  .product-thumb-4 { background: linear-gradient(135deg, #D0C8E8 0%, #B8ACDC 100%); }
+  .product-thumb-5 { background: linear-gradient(135deg, #F5E6D0 0%, #EED4B0 100%); }
+  .product-badge {
+    position: absolute;
+    top: 12px; right: 12px;
+    background: var(--charcoal);
+    color: var(--cream);
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 100px;
+  }
+  .product-info { padding: 20px; }
+  .product-name {
+    font-family: var(--serif);
+    font-size: 1.15rem;
+    font-weight: 500;
+    color: var(--charcoal);
+    margin-bottom: 4px;
+  }
+  .product-desc { font-size: 13px; font-weight: 300; color: var(--charcoal-mid); margin-bottom: 14px; line-height: 1.5; }
+  .product-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .product-price { font-size: 16px; font-weight: 500; color: var(--charcoal); }
+  .product-price .was { text-decoration: line-through; font-size: 13px; color: var(--charcoal-light); margin-right: 6px; font-weight: 300; }
+  .product-btn {
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--terracotta);
+    text-decoration: none;
+    border-bottom: 1px solid var(--terracotta-light);
+    padding-bottom: 1px;
+    transition: border-color 0.2s;
+  }
+  .product-btn:hover { border-color: var(--terracotta); }
+
+  /* ── FAVORITES / AFFILIATE ── */
+  .favorites {
+    padding: 100px 0;
+    background: var(--oatmeal);
+  }
+  .favorites-header { text-align: center; margin-bottom: 56px; }
+  .favorites-header .section-sub { margin: 12px auto 0; text-align: center; }
+  .fav-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 16px;
+  }
+  .fav-card {
+    background: var(--warm-white);
+    border-radius: var(--radius);
+    padding: 24px 20px;
+    text-align: center;
+    transition: transform var(--transition);
+    text-decoration: none;
+    color: inherit;
+    display: block;
+  }
+  .fav-card:hover { transform: translateY(-4px); }
+  .fav-emoji { font-size: 32px; margin-bottom: 12px; display: block; }
+  .fav-name {
+    font-family: var(--serif);
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: var(--charcoal);
+    margin-bottom: 4px;
+  }
+  .fav-sub { font-size: 12px; font-weight: 300; color: var(--charcoal-light); margin-bottom: 12px; }
+  .fav-link {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--sage);
+    text-decoration: none;
+  }
+
+  /* ── TESTIMONIALS ── */
+  .testimonials {
+    padding: 100px 0;
+    background: var(--warm-white);
+  }
+  .testimonials-header { text-align: center; margin-bottom: 56px; }
+  .testimonials-header .section-sub { margin: 12px auto 0; text-align: center; }
+  .testi-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+  }
+  .testi-card {
+    background: var(--oatmeal);
+    border-radius: var(--radius);
+    padding: 32px 28px;
+    position: relative;
+  }
+  .testi-quote-mark {
+    font-family: var(--serif);
+    font-size: 80px;
+    line-height: 0.5;
+    color: var(--terracotta-light);
+    position: absolute;
+    top: 24px;
+    right: 28px;
+    font-weight: 400;
+    pointer-events: none;
+  }
+  .testi-stars { color: var(--terracotta); font-size: 14px; letter-spacing: 2px; margin-bottom: 16px; }
+  .testi-text {
+    font-family: var(--serif);
+    font-size: 1.1rem;
+    font-weight: 300;
+    font-style: italic;
+    color: var(--charcoal);
+    line-height: 1.65;
+    margin-bottom: 20px;
+  }
+  .testi-author {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .testi-avatar {
+    width: 40px; height: 40px;
+    border-radius: 50%;
+    background: var(--sand);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--charcoal-mid);
+    font-family: var(--serif);
+  }
+  .testi-name { font-size: 14px; font-weight: 500; color: var(--charcoal); }
+  .testi-role { font-size: 12px; font-weight: 300; color: var(--charcoal-light); }
+
+  /* ── BLOG CATEGORIES ── */
+  .blog-section {
+    padding: 100px 0;
+    background: var(--cream);
+  }
+  .blog-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 48px;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .categories-row {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 36px;
+  }
+  .cat-btn {
+    padding: 8px 18px;
+    border-radius: 100px;
+    border: 1.5px solid var(--sand);
+    background: transparent;
+    font-family: var(--sans);
+    font-size: 13px;
+    font-weight: 400;
+    color: var(--charcoal-mid);
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .cat-btn.active, .cat-btn:hover {
+    background: var(--charcoal);
+    color: var(--cream);
+    border-color: var(--charcoal);
+  }
+  .blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+  }
+  .blog-card {
+    background: var(--warm-white);
+    border-radius: var(--radius);
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    transition: transform var(--transition), box-shadow var(--transition);
+  }
+  .blog-card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(58,53,48,0.09); }
+  .blog-thumb {
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 44px;
+    background: var(--oatmeal);
+  }
+  .blog-thumb-2 { background: #E8EDE4; }
+  .blog-thumb-3 { background: #EDE8E0; }
+  .blog-info { padding: 24px; }
+  .blog-cat {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--terracotta);
+    margin-bottom: 8px;
+    display: block;
+  }
+  .blog-title {
+    font-family: var(--serif);
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: var(--charcoal);
+    line-height: 1.3;
+    margin-bottom: 10px;
+  }
+  .blog-excerpt { font-size: 14px; font-weight: 300; color: var(--charcoal-mid); line-height: 1.65; }
+  .blog-meta {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 16px;
+    font-size: 12px;
+    color: var(--charcoal-light);
+    font-weight: 300;
+  }
+  .blog-meta span { width: 3px; height: 3px; border-radius: 50%; background: var(--charcoal-light); }
+
+  /* ── SOCIAL / INSTAGRAM ── */
+  .social-section {
+    padding: 100px 0;
+    background: var(--oatmeal);
+  }
+  .social-header { text-align: center; margin-bottom: 48px; }
+  .social-handle {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--charcoal-mid);
+    text-decoration: none;
+    margin-top: 10px;
+    transition: color 0.2s;
+  }
+  .social-handle:hover { color: var(--terracotta); }
+  .insta-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10px;
+  }
+  .insta-cell {
+    aspect-ratio: 1;
+    border-radius: var(--radius-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.2s;
+  }
+  .insta-cell:hover { transform: scale(0.97); }
+  .insta-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(58,53,48,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+  .insta-cell:hover .insta-overlay { opacity: 1; }
+  .insta-overlay-icon { color: #fff; font-size: 22px; }
+  .ic1 { background: #E8DFD0; }
+  .ic2 { background: #C5D5C0; }
+  .ic3 { background: #E8C4B0; }
+  .ic4 { background: #D4C5B0; }
+  .ic5 { background: #DDE8D8; }
+  .ic6 { background: #F0E4D4; }
+  @media (max-width: 768px) {
+    .insta-grid { grid-template-columns: repeat(3, 1fr); }
+    .insta-cell:nth-child(n+7) { display: none; }
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--charcoal);
+    color: var(--cream);
+    padding: 72px 24px 36px;
+  }
+  .footer-inner {
+    max-width: 1120px;
+    margin: 0 auto;
+  }
+  .footer-top {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 48px;
+    padding-bottom: 48px;
+    border-bottom: 1px solid rgba(250,247,242,0.1);
+    margin-bottom: 36px;
+  }
+  .footer-brand-name {
+    font-family: var(--serif);
+    font-size: 24px;
+    font-weight: 400;
+    color: var(--cream);
+    margin-bottom: 12px;
+  }
+  .footer-brand-name span { color: var(--terracotta-light); }
+  .footer-tagline { font-size: 14px; font-weight: 300; color: rgba(250,247,242,0.6); line-height: 1.65; margin-bottom: 24px; }
+  .footer-social {
+    display: flex;
+    gap: 12px;
+  }
+  .footer-social a {
+    width: 38px; height: 38px;
+    border-radius: 50%;
+    border: 1px solid rgba(250,247,242,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    text-decoration: none;
+    transition: all 0.2s;
+  }
+  .footer-social a:hover { border-color: var(--terracotta-light); background: rgba(196,119,90,0.15); }
+  .footer-col-title {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(250,247,242,0.5);
+    margin-bottom: 20px;
+  }
+  .footer-links { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+  .footer-links a {
+    font-size: 14px;
+    font-weight: 300;
+    color: rgba(250,247,242,0.7);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .footer-links a:hover { color: var(--cream); }
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .footer-copy { font-size: 13px; font-weight: 300; color: rgba(250,247,242,0.4); }
+  .footer-legal { display: flex; gap: 20px; }
+  .footer-legal a { font-size: 13px; font-weight: 300; color: rgba(250,247,242,0.4); text-decoration: none; transition: color 0.2s; }
+  .footer-legal a:hover { color: rgba(250,247,242,0.8); }
+  @media (max-width: 768px) {
+    .footer-top { grid-template-columns: 1fr 1fr; gap: 32px; }
+    .footer-top > *:first-child { grid-column: 1 / -1; }
+  }
+
+  /* ── POPUP ── */
+  .popup-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(58,53,48,0.55);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+  }
+  .popup-overlay.active { opacity: 1; pointer-events: all; }
+  .popup {
+    background: var(--warm-white);
+    border-radius: var(--radius);
+    max-width: 500px;
+    width: 100%;
+    overflow: hidden;
+    transform: scale(0.95);
+    transition: transform 0.3s;
+  }
+  .popup-overlay.active .popup { transform: scale(1); }
+  .popup-top {
+    background: var(--charcoal);
+    padding: 36px 36px 28px;
+    position: relative;
+  }
+  .popup-close {
+    position: absolute;
+    top: 16px; right: 16px;
+    width: 32px; height: 32px;
+    border-radius: 50%;
+    border: 1px solid rgba(250,247,242,0.2);
+    background: none;
+    color: rgba(250,247,242,0.6);
+    cursor: pointer;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+  }
+  .popup-close:hover { background: rgba(250,247,242,0.1); color: var(--cream); }
+  .popup-tag { font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--terracotta-light); margin-bottom: 10px; display: block; }
+  .popup-title { font-family: var(--serif); font-size: 1.9rem; font-weight: 300; color: var(--cream); line-height: 1.2; }
+  .popup-body { padding: 28px 36px 36px; }
+  .popup-sub { font-size: 15px; font-weight: 300; color: var(--charcoal-mid); margin-bottom: 24px; line-height: 1.6; }
+  .popup-form { display: flex; flex-direction: column; gap: 10px; }
+  .popup-form .email-input { background: var(--oatmeal); border-color: var(--sand); }
+  .popup-form .btn-primary { justify-content: center; }
+  .popup-no { text-align: center; margin-top: 12px; font-size: 13px; color: var(--charcoal-light); cursor: pointer; text-decoration: underline; transition: color 0.2s; }
+  .popup-no:hover { color: var(--charcoal); }
+
+  /* ── STICKY MOBILE CTA ── */
+  .sticky-cta {
+    display: none;
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    z-index: 90;
+    background: var(--warm-white);
+    border-top: 1px solid var(--sand);
+    padding: 14px 20px;
+    gap: 10px;
+    box-shadow: 0 -8px 24px rgba(58,53,48,0.08);
+  }
+  @media (max-width: 768px) {
+    .sticky-cta { display: flex; }
+    .sticky-cta .btn-primary, .sticky-cta .btn-outline { flex: 1; font-size: 12px; padding: 12px 16px; justify-content: center; }
+    body { padding-bottom: 80px; }
+  }
+
+  /* ── SECTION SPACING ── */
+  section + section { }
+
+  /* ── SCROLL REVEAL (IntersectionObserver) ── */
+  .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s ease; }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+  .reveal-d1 { transition-delay: 0.1s; }
+  .reveal-d2 { transition-delay: 0.2s; }
+  .reveal-d3 { transition-delay: 0.3s; }
+  .reveal-d4 { transition-delay: 0.4s; }
+  .reveal-d5 { transition-delay: 0.5s; }
+</style>
+</head>
+<body>
+
+<!-- ═══ POPUP ═══ -->
+<div class="popup-overlay" id="popup">
+  <div class="popup">
+    <div class="popup-top">
+      <button class="popup-close" onclick="closePopup()">✕</button>
+      <span class="popup-tag">Free Download</span>
+      <h2 class="popup-title">7 Tools That Buy Moms Time — Free</h2>
+    </div>
+    <div class="popup-body">
+      <p class="popup-sub">Join 4,200+ moms getting teacher-approved tools, calm home strategies, and systems that actually work — delivered straight to your inbox.</p>
+      <div class="popup-form">
+        <input type="text" class="email-input" placeholder="Your first name" />
+        <input type="email" class="email-input" placeholder="Your email address" />
+        <a href="#" class="btn-primary">Yes! Send My Free Guide →</a>
+      </div>
+      <p class="popup-no" onclick="closePopup()">No thanks, I don't need more calm in my day</p>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ NAV ═══ -->
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">The Teacher Mom <span>Edit</span></a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#systems">Systems</a></li>
+      <li><a href="quiet-truths.html">Quiet Truths</a></li>
+      <li><a href="#shop">Shop</a></li>
+      <li><a href="favorites.html">Product Recommendations</a></li>
+      <li><a href="blog/index.html">Blog</a></li>
+      <li><a href="freebies.html">Freebies</a></li>
+    </ul>
+    <a href="#" class="btn-primary nav-cta" onclick="openPopup()">Free Guide</a>
+    <button class="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ═══ HERO ═══ -->
+<section class="hero">
+  <div class="container" style="display:contents;">
+    <div class="hero-text container fade-up">
+      <div class="hero-eyebrow">
+        <div class="hero-eyebrow-dot"></div>
+        <span>For the mom who needs a moment</span>
+      </div>
+      <h1 class="hero-headline">
+        Less chaos.<br>
+        <em>More calm.</em>
+      </h1>
+      <p class="hero-sub">Teacher-approved systems and mom-tested tools that help your home breathe again — without overhauling your entire life.</p>
+      <div class="hero-btns">
+        <a href="#freebies" class="btn-primary" onclick="openPopup()">Get Free Guide →</a>
+        <a href="#shop" class="btn-outline">Shop My Favorites</a>
+      </div>
+      <div class="hero-social-proof">
+        <div class="hero-avatars">
+          <div class="hero-avatar">S</div>
+          <div class="hero-avatar">M</div>
+          <div class="hero-avatar">J</div>
+          <div class="hero-avatar">R</div>
+        </div>
+        <p class="hero-proof-text"><strong>4,200+ moms</strong> already simplifying their lives</p>
+      </div>
+    </div>
+
+    <div class="hero-visual fade-up fade-up-d2">
+      <div class="hero-img-block">
+        <!-- Hero photo: swap src to images/hero-classroom-2.jpg or images/hero-classroom-5.jpg to try the alternates -->
+        <img class="hero-img-placeholder" src="images/hero-classroom-1.jpg" alt="A calm, earthy classroom with warm natural light">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ TRUST BAR ═══ -->
+<div class="trust-bar">
+  <div class="trust-bar-inner">
+    <span class="trust-item"><span class="trust-dot"></span>Teacher + Mom of Two</span>
+    <span class="trust-item"><span class="trust-dot"></span>4,200+ Moms Simplifying Daily</span>
+    <span class="trust-item"><span class="trust-dot"></span>Educator-Backed Systems</span>
+    <span class="trust-item"><span class="trust-dot"></span>Real Home. Real Life.</span>
+    <span class="trust-item"><span class="trust-dot"></span>Honest Product Recommendations</span>
+    <span class="trust-item"><span class="trust-dot"></span>No Perfect Mom Required</span>
+    <!-- Duplicate for seamless loop -->
+    <span class="trust-item"><span class="trust-dot"></span>Teacher + Mom of Two</span>
+    <span class="trust-item"><span class="trust-dot"></span>4,200+ Moms Simplifying Daily</span>
+    <span class="trust-item"><span class="trust-dot"></span>Educator-Backed Systems</span>
+    <span class="trust-item"><span class="trust-dot"></span>Real Home. Real Life.</span>
+    <span class="trust-item"><span class="trust-dot"></span>Honest Product Recommendations</span>
+    <span class="trust-item"><span class="trust-dot"></span>No Perfect Mom Required</span>
+  </div>
+</div>
+
+<!-- ═══ ABOUT ═══ -->
+<section class="about" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-img-wrap reveal">
+        <div class="about-img-bg">
+          <svg width="100%" height="100%" viewBox="0 0 400 500" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:block;">
+            <rect width="400" height="500" fill="#F2EDE4"/>
+            <!-- Abstract warm portrait suggestion -->
+            <ellipse cx="200" cy="160" rx="80" ry="85" fill="#E8DFD0"/>
+            <ellipse cx="200" cy="155" rx="55" ry="60" fill="#D4C5B0"/>
+            <!-- Suggestion of figure -->
+            <ellipse cx="200" cy="320" rx="110" ry="140" fill="#E8DFD0"/>
+            <ellipse cx="200" cy="155" rx="45" ry="50" fill="#C8B89A"/>
+            <!-- Hair suggestion -->
+            <ellipse cx="200" cy="120" rx="55" ry="50" fill="#8A6F5A"/>
+            <ellipse cx="155" cy="155" rx="18" ry="40" fill="#8A6F5A"/>
+            <ellipse cx="245" cy="155" rx="18" ry="40" fill="#8A6F5A"/>
+            <!-- Simple smiley suggestion -->
+            <circle cx="183" cy="158" r="5" fill="#6B5A4A" opacity="0.4"/>
+            <circle cx="217" cy="158" r="5" fill="#6B5A4A" opacity="0.4"/>
+            <path d="M186 175 Q200 186 214 175" stroke="#6B5A4A" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.4"/>
+            <!-- Cozy outfit -->
+            <ellipse cx="200" cy="320" rx="90" ry="120" fill="#8FA68A" opacity="0.5"/>
+            <!-- books in arm -->
+            <rect x="248" y="280" width="36" height="50" rx="4" fill="#C4775A" opacity="0.7"/>
+            <rect x="256" y="275" width="28" height="8" rx="2" fill="#B06848" opacity="0.6"/>
+            <!-- background botanicals -->
+            <circle cx="48" cy="80" r="28" fill="#8FA68A" opacity="0.2"/>
+            <circle cx="360" cy="420" r="36" fill="#C4775A" opacity="0.12"/>
+            <circle cx="370" cy="60" r="20" fill="#8FA68A" opacity="0.15"/>
+          </svg>
+        </div>
+        <div class="about-badge">
+          <strong>8+</strong>
+          years in the classroom & at home
+        </div>
+      </div>
+
+      <div class="about-content reveal reveal-d2">
+        <span class="tag">Meet Your Guide</span>
+        <blockquote class="about-quote">"I built the systems I wished someone had handed me on day one of motherhood."</blockquote>
+        <p class="about-body">
+          Hi, I'm so glad you're here. I'm a mom of two, a current classroom teacher, and an instructional coach — which basically means I spend my days helping both kids and adults learn better, and my evenings trying to bring that same calm into my own home.<br><br>
+          I believe that when a home runs smoothly, everyone breathes easier — kids included. I'm not here to sell you perfection. I'm here to share what actually works: practical routines, learning-friendly environments, and products worth every penny.<br><br>
+          Whether you're drowning in the after-school rush or just craving a quieter morning — this is your place.
+        </p>
+        <div class="about-creds">
+          <div class="cred-pill"><span class="cred-pill-dot"></span>Instructional Coach</div>
+          <div class="cred-pill"><span class="cred-pill-dot"></span>Child Development</div>
+          <div class="cred-pill"><span class="cred-pill-dot"></span>Mom of Two</div>
+        </div>
+        <div style="margin-top:32px;">
+          <a href="#" class="btn-outline">Read My Full Story →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ WHAT I HELP WITH ═══ -->
+<section class="help-section" id="systems">
+  <div class="container">
+    <div class="help-header reveal">
+      <span class="tag">What You'll Find Here</span>
+      <h2 class="section-title">Systems for every corner<br>of mom life</h2>
+      <p class="section-sub">From morning routines to quiet-time setups — practical support for the parts of parenting nobody teaches you.</p>
+    </div>
+    <div class="help-grid">
+      <a href="save-time-daily.html" class="help-card reveal reveal-d1">
+        <span class="help-card-num">01</span>
+        <h3 class="help-card-title">Save Time Daily</h3>
+        <p class="help-card-body">There's already enough on your plate. This system is all about making the everyday stuff faster, simpler, and easier to manage. From prep-ahead ideas and family shortcuts to practical tools that actually save time, you'll find realistic ways to cut down on the little tasks that somehow take over your whole day.</p>
+        <span class="help-card-cta">Explore →</span>
+      </a>
+      <a href="better-routines.html" class="help-card reveal reveal-d2">
+        <span class="help-card-num">02</span>
+        <h3 class="help-card-title">Better Routines</h3>
+        <p class="help-card-body">If you feel like you're constantly reminding, repeating, and rushing everyone through the same parts of the day, this is for you. These routines are designed to help kids know what comes next, build more independence, and make mornings, bedtimes, clean-up, and everything in between feel a little less exhausting.</p>
+        <span class="help-card-cta">Explore →</span>
+      </a>
+      <a href="calm-after-school.html" class="help-card reveal reveal-d3">
+        <span class="help-card-num">03</span>
+        <h3 class="help-card-title">Calm After-School Chaos</h3>
+        <p class="help-card-body">The after-school hours can unravel fast — everyone is tired, hungry, overstimulated, and still needs something from you. This system is here to make that transition gentler, with simple routines, reset ideas, and practical strategies that help kids decompress so the rest of the evening feels more manageable.</p>
+        <span class="help-card-cta">Explore →</span>
+      </a>
+      <a href="home-organization.html" class="help-card reveal reveal-d1">
+        <span class="help-card-num">04</span>
+        <h3 class="help-card-title">Home Organization</h3>
+        <p class="help-card-body">Your home does not need to look perfectly organized. It needs to work for the people living in it. Here you'll find practical systems for backpacks, toys, school papers, bins, drop zones, and all the everyday stuff that tends to pile up — so things are easier to find, easier to put away, and easier to reset.</p>
+        <span class="help-card-cta">Explore →</span>
+      </a>
+      <a href="school-readiness.html" class="help-card reveal reveal-d2">
+        <span class="help-card-num">05</span>
+        <h3 class="help-card-title">School Readiness</h3>
+        <p class="help-card-body">Getting ready for school is about so much more than knowing letters and numbers. This system focuses on the real-life skills that help kids feel confident and capable — things like independence, communication, routines, fine motor skills, and knowing what to expect when they walk into a classroom. Simple, practical, and never about pushing kids ahead before they're ready.</p>
+        <span class="help-card-cta">Explore →</span>
+      </a>
+      <a href="mom-reset.html" class="help-card reveal reveal-d3">
+        <span class="help-card-num">06</span>
+        <h3 class="help-card-title">Mom Reset Systems</h3>
+        <p class="help-card-body">Sometimes it's not the house that needs a reset — it's everything living in your head. This space is for the planning, prep, and simple systems that help you feel a little more caught up and a lot less scattered. Think weekly resets, calendars, family admin, meal planning, and the small routines that make the next day or week feel easier to step into.</p>
+        <span class="help-card-cta">Explore →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ LEAD MAGNET ═══ -->
+<section class="lead-magnet" id="freebies">
+  <div class="container">
+    <div class="lead-inner">
+      <div class="lead-content reveal">
+        <span class="tag">Free Download</span>
+        <h2 class="section-title">7 Teacher-Approved Tools That Buy Moms Time</h2>
+        <p class="section-sub">A curated guide from a working teacher and a real home. These are the exact tools I reach for on hard days.</p>
+        <ul class="lead-list">
+          <li><span class="lead-check">✓</span>The visual timer that transforms quiet time</li>
+          <li><span class="lead-check">✓</span>The bin system that keeps toys organized (actually)</li>
+          <li><span class="lead-check">✓</span>The routine card set my kids use without reminders</li>
+          <li><span class="lead-check">✓</span>The one snack system that ended daily meltdowns</li>
+          <li><span class="lead-check">✓</span>My top pick for independent learning at any age</li>
+          <li><span class="lead-check">✓</span>The car kit that saves every road trip</li>
+          <li><span class="lead-check">✓</span>The reset tool I use for myself (yes, moms count)</li>
+        </ul>
+        <div class="email-form">
+          <input type="text" class="email-input" placeholder="Your first name" />
+          <input type="email" class="email-input" placeholder="Your best email address" />
+          <a href="#" class="btn-sage">Download Free →</a>
+        </div>
+        <p class="lead-privacy">🔒 No spam, ever. Unsubscribe any time. Just calm in your inbox.</p>
+      </div>
+      <div class="lead-visual reveal reveal-d2">
+        <div class="lead-mockup">
+          <div class="lead-mockup-top">
+            <div class="lead-mockup-tag">Free Guide · The Teacher Mom Edit</div>
+            <div class="lead-mockup-title">7 Teacher-Approved Tools That Buy Moms Time</div>
+          </div>
+          <div class="lead-mockup-body">
+            <div class="lead-mockup-item"><span class="lead-mockup-num">1</span>Visual Timers for Quiet Time</div>
+            <div class="lead-mockup-item"><span class="lead-mockup-num">2</span>The Calm-Down Bin System</div>
+            <div class="lead-mockup-item"><span class="lead-mockup-num">3</span>Routine Cards That Stick</div>
+            <div class="lead-mockup-item"><span class="lead-mockup-num">4</span>The Snack Station Setup</div>
+            <div class="lead-mockup-item"><span class="lead-mockup-num">5</span>Independent Learning Pick</div>
+            <div class="lead-mockup-item"><span class="lead-mockup-num">6</span>The Car Calm Kit</div>
+            <div class="lead-mockup-item"><span class="lead-mockup-num">7</span>Mom's Own Reset Tool</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="free-guides-wrap reveal">
+      <div class="free-guides-header">
+        <span class="tag">Free guides</span>
+        <h2 class="section-title">Printable PDFs for calmer days</h2>
+        <p class="section-sub free-guides-sub">Three ready-to-use guides — download the PDFs below and print at home. No email gate: just open, save, and use tonight.</p>
+      </div>
+      <div class="free-guides-grid">
+        <article class="free-guide-card reveal reveal-d1">
+          <div class="free-guide-thumb-wrap">
+            <img src="assets/guides/kindergarten-readiness-preview.jpg" alt="Preview of the Kindergarten Readiness Checklist printable" width="600" height="800" loading="lazy" decoding="async" />
+          </div>
+          <div class="free-guide-body">
+            <h3 class="free-guide-title">Kindergarten Readiness Checklist</h3>
+            <p class="free-guide-desc">A gentle, at-a-glance snapshot across emotional readiness, social skills, independence, language, focus, fine motor, and curiosity — so you can nurture growth at home without the stress of a “pass or fail” mindset.</p>
+            <a href="guides/kindergarten-readiness-checklist.pdf" class="btn-sage" download="Kindergarten-Readiness-Checklist.pdf">Download PDF</a>
+          </div>
+        </article>
+        <article class="free-guide-card reveal reveal-d2">
+          <div class="free-guide-thumb-wrap">
+            <img src="assets/guides/morning-routine-preview.jpg" alt="Preview of the Calm School Morning checklist printable" width="600" height="800" loading="lazy" decoding="async" />
+          </div>
+          <div class="free-guide-body">
+            <h3 class="free-guide-title">Morning Routine Checklist</h3>
+            <p class="free-guide-desc">Side-by-side checklists for you and your child — night-before prep, a calmer morning flow, first-day tasks (dress, eat, pack up), and small connection prompts so school mornings feel steadier, not rushed.</p>
+            <a href="guides/morning-routine-checklist.pdf" class="btn-sage" download="Morning-Routine-Checklist.pdf">Download PDF</a>
+          </div>
+        </article>
+        <article class="free-guide-card reveal reveal-d3">
+          <div class="free-guide-thumb-wrap">
+            <img src="assets/guides/conversation-starters-preview.jpg" alt="Preview of the Conversation Starters printable" width="600" height="800" loading="lazy" decoding="async" />
+          </div>
+          <div class="free-guide-body">
+            <h3 class="free-guide-title">Conversation Starters</h3>
+            <p class="free-guide-desc">Questions that go deeper than “How was school?” — organized for dinner, the car, and bedtime so you get real stories, proud moments, and worries while they’re still small enough to share them.</p>
+            <a href="guides/conversation-starters.pdf" class="btn-sage" download="Conversation-Starters.pdf">Download PDF</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SHOP / PRODUCTS ═══ -->
+<section class="products" id="shop">
+  <div class="container">
+    <div class="products-header">
+      <div class="reveal">
+        <span class="tag">Digital Products</span>
+        <h2 class="section-title">Tools built for real mom life</h2>
+      </div>
+      <a href="#" class="btn-outline reveal">Browse All →</a>
+    </div>
+    <div class="products-grid">
+      <a href="#" class="product-card reveal reveal-d1">
+        <div class="product-thumb product-thumb-1">
+          🌙
+          <span class="product-badge">Bestseller</span>
+        </div>
+        <div class="product-info">
+          <div class="product-name">Quiet Time Kit</div>
+          <div class="product-desc">A complete system for independent rest time — visual cues, bin labels, activity prompts, and a parent guide.</div>
+          <div class="product-footer">
+            <div class="product-price"><span class="was">$24</span>$17</div>
+            <a href="#" class="product-btn">Get It →</a>
+          </div>
+        </div>
+      </a>
+      <a href="#" class="product-card reveal reveal-d2">
+        <div class="product-thumb product-thumb-2">🌿</div>
+        <div class="product-info">
+          <div class="product-name">After-School Calm Routine</div>
+          <div class="product-desc">Printable cards and a step-by-step transition guide that takes kids from school mode to home mode peacefully.</div>
+          <div class="product-footer">
+            <div class="product-price">$12</div>
+            <a href="#" class="product-btn">Get It →</a>
+          </div>
+        </div>
+      </a>
+      <a href="#" class="product-card reveal reveal-d3">
+        <div class="product-thumb product-thumb-3">
+          ✨
+          <span class="product-badge">New</span>
+        </div>
+        <div class="product-info">
+          <div class="product-name">Mom Reset Guide</div>
+          <div class="product-desc">A 20-minute reset system for when the day falls apart. Because you deserve a plan too.</div>
+          <div class="product-footer">
+            <div class="product-price">$9</div>
+            <a href="#" class="product-btn">Get It →</a>
+          </div>
+        </div>
+      </a>
+      <a href="#" class="product-card reveal reveal-d4">
+        <div class="product-thumb product-thumb-4">🧸</div>
+        <div class="product-info">
+          <div class="product-name">Toddler Independence Toolkit</div>
+          <div class="product-desc">Simple setups, activity ideas, and visual supports that build big independence in little people.</div>
+          <div class="product-footer">
+            <div class="product-price"><span class="was">$19</span>$14</div>
+            <a href="#" class="product-btn">Get It →</a>
+          </div>
+        </div>
+      </a>
+      <a href="#" class="product-card reveal reveal-d5">
+        <div class="product-thumb product-thumb-5">🥪</div>
+        <div class="product-info">
+          <div class="product-name">Snack System Templates</div>
+          <div class="product-desc">Weekly rotation cards, grocery lists by age group, and a pantry label set. Snack time, simplified.</div>
+          <div class="product-footer">
+            <div class="product-price">$8</div>
+            <a href="#" class="product-btn">Get It →</a>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FAVORITES ═══ -->
+<section class="favorites">
+  <div class="container">
+    <div class="favorites-header reveal">
+      <span class="tag">Teacher-Approved Picks</span>
+      <h2 class="section-title">Things I genuinely love</h2>
+      <p class="section-sub">No fluff. Just the products I reach for in my own home and have recommended to hundreds of moms.</p>
+    </div>
+    <div class="fav-grid">
+      <a href="#" class="fav-card reveal reveal-d1">
+        <span class="fav-emoji">🚗</span>
+        <div class="fav-name">Car Organization</div>
+        <div class="fav-sub">Road trip sanity savers</div>
+        <span class="fav-link">Shop Picks →</span>
+      </a>
+      <a href="#" class="fav-card reveal reveal-d2">
+        <span class="fav-emoji">🧩</span>
+        <div class="fav-name">Travel Toys</div>
+        <div class="fav-sub">Quiet + engaging</div>
+        <span class="fav-link">Shop Picks →</span>
+      </a>
+      <a href="#" class="fav-card reveal reveal-d3">
+        <span class="fav-emoji">🗂</span>
+        <div class="fav-name">Quiet Bins</div>
+        <div class="fav-sub">Independent play heroes</div>
+        <span class="fav-link">Shop Picks →</span>
+      </a>
+      <a href="#" class="fav-card reveal reveal-d4">
+        <span class="fav-emoji">📚</span>
+        <div class="fav-name">Learning Tools</div>
+        <div class="fav-sub">Teacher-backed picks</div>
+        <span class="fav-link">Shop Picks →</span>
+      </a>
+      <a href="#" class="fav-card reveal reveal-d5">
+        <span class="fav-emoji">🍽</span>
+        <div class="fav-name">Kitchen Systems</div>
+        <div class="fav-sub">Meal & snack sanity</div>
+        <span class="fav-link">Shop Picks →</span>
+      </a>
+      <a href="#" class="fav-card reveal reveal-d1">
+        <span class="fav-emoji">🌸</span>
+        <div class="fav-name">Mom Wellness</div>
+        <div class="fav-sub">Because you matter</div>
+        <span class="fav-link">Shop Picks →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ TESTIMONIALS ═══ -->
+<section class="testimonials">
+  <div class="container">
+    <div class="testimonials-header reveal">
+      <span class="tag">What Moms Are Saying</span>
+      <h2 class="section-title">Finally… someone who gets it</h2>
+      <p class="section-sub">Real words from real moms who were exactly where you are.</p>
+    </div>
+    <div class="testi-grid">
+      <div class="testi-card reveal reveal-d1">
+        <div class="testi-quote-mark">"</div>
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">I downloaded the Quiet Time Kit on a Tuesday and by Thursday afternoon my house felt different. My four-year-old set up his own bin activity without me. I literally teared up.</p>
+        <div class="testi-author">
+          <div class="testi-avatar">S</div>
+          <div>
+            <div class="testi-name">Sarah M.</div>
+            <div class="testi-role">Mom of two, Texas</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card reveal reveal-d2">
+        <div class="testi-quote-mark">"</div>
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">The after-school routine guide changed our evenings entirely. We went from constant meltdowns to my kids actually going through the steps themselves. The teacher-brain behind this really shows.</p>
+        <div class="testi-author">
+          <div class="testi-avatar">J</div>
+          <div>
+            <div class="testi-name">Jamie L.</div>
+            <div class="testi-role">Working mom of three</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card reveal reveal-d3">
+        <div class="testi-quote-mark">"</div>
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">I've followed a lot of mom accounts but this one actually gives me tools I can use today. Not aspirational, not overwhelming — just real, warm, practical help. I tell every mom friend about it.</p>
+        <div class="testi-author">
+          <div class="testi-avatar">R</div>
+          <div>
+            <div class="testi-name">Rachel K.</div>
+            <div class="testi-role">Stay-at-home mom, Ohio</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ BLOG ═══ -->
+<section class="blog-section" id="blog">
+  <div class="container">
+    <div class="blog-header">
+      <div class="reveal">
+        <span class="tag">From the Blog</span>
+        <h2 class="section-title">Reads for the real-life mom</h2>
+      </div>
+      <a href="blog/index.html" class="btn-outline reveal">All Posts →</a>
+    </div>
+    <div class="blog-grid">
+      <a href="blog-worst-behaviour.html" class="blog-card reveal reveal-d1">
+        <div class="blog-thumb blog-thumb-3"><img src="premium_photo-1723629808873-55f447f35138.avif" alt="Why Your Child Saves Their Worst Behaviour for You" /></div>
+        <div class="blog-info">
+          <span class="blog-cat">Calm Parenting</span>
+          <h3 class="blog-title">Why Your Child Saves Their Worst Behaviour for You</h3>
+          <p class="blog-excerpt">It's not a bad sign. It's actually the opposite.</p>
+          <div class="blog-meta">2 min read <span></span> Calm Parenting</div>
+        </div>
+      </a>
+      <a href="blog-drop-zone.html" class="blog-card reveal reveal-d2">
+        <div class="blog-thumb"><img src="istockphoto-1446556818-612x612.webp" alt="The Drop Zone Every Family Needs by the Front Door" /></div>
+        <div class="blog-info">
+          <span class="blog-cat">Home Systems</span>
+          <h3 class="blog-title">The Drop Zone Every Family Needs by the Front Door</h3>
+          <p class="blog-excerpt">One simple system that ends the morning hunt for shoes, bags, and everything else.</p>
+          <div class="blog-meta">2 min read <span></span> Home Systems</div>
+        </div>
+      </a>
+      <a href="blog-toddler-wants-you.html" class="blog-card reveal reveal-d3">
+        <div class="blog-thumb blog-thumb-2"><img src="premium_photo-1666299837951-a91d4a7f2025.avif" alt="What to Do When Your Toddler Wants You Every 5 Seconds" /></div>
+        <div class="blog-info">
+          <span class="blog-cat">Toddler Life</span>
+          <h3 class="blog-title">What to Do When Your Toddler Wants You Every 5 Seconds</h3>
+          <p class="blog-excerpt">The simple connection trick that makes independent play actually work.</p>
+          <div class="blog-meta">2 min read <span></span> Toddler Life</div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ INSTAGRAM ═══ -->
+<section class="social-section">
+  <div class="container">
+    <div class="social-header reveal">
+      <span class="tag">Stay Connected</span>
+      <h2 class="section-title">Real moments from a real home</h2>
+      <div style="display:flex;gap:20px;justify-content:center;flex-wrap:wrap;"><a href="https://instagram.com/teachermomedit" class="social-handle" target="_blank">📸 @teachermomedit</a><a href="https://tiktok.com/@teachermomedit" class="social-handle" target="_blank">🎵 @teachermomedit</a></div>
+    </div>
+    <div class="insta-grid reveal">
+      <div class="insta-cell ic1">🌿
+        <div class="insta-overlay"><span class="insta-overlay-icon">♡</span></div>
+      </div>
+      <div class="insta-cell ic2">🧸
+        <div class="insta-overlay"><span class="insta-overlay-icon">♡</span></div>
+      </div>
+      <div class="insta-cell ic3">☀️
+        <div class="insta-overlay"><span class="insta-overlay-icon">♡</span></div>
+      </div>
+      <div class="insta-cell ic4">📚
+        <div class="insta-overlay"><span class="insta-overlay-icon">♡</span></div>
+      </div>
+      <div class="insta-cell ic5">🗂
+        <div class="insta-overlay"><span class="insta-overlay-icon">♡</span></div>
+      </div>
+      <div class="insta-cell ic6">🌸
+        <div class="insta-overlay"><span class="insta-overlay-icon">♡</span></div>
+      </div>
+      <div class="insta-cell ic1">🧺
+        <div class="insta-overlay"><span class="insta-overlay-icon">♡</span></div>
+      </div>
+      <div class="insta-cell ic3">🍵
+        <div class="insta-overlay"><span class="insta-overlay-icon">♡</span></div>
+      </div>
+      <div class="insta-cell ic2">✏️
+        <div class="insta-overlay"><span class="insta-overlay-icon">♡</span></div>
+      </div>
+      <div class="insta-cell ic5">🌙
+        <div class="insta-overlay"><span class="insta-overlay-icon">♡</span></div>
+      </div>
+      <div class="insta-cell ic4">🎨
+        <div class="insta-overlay"><span class="insta-overlay-icon">♡</span></div>
+      </div>
+      <div class="insta-cell ic6">🏡
+        <div class="insta-overlay"><span class="insta-overlay-icon">♡</span></div>
+      </div>
+    </div>
+    <div style="text-align:center; margin-top:36px;" class="reveal">
+      <a href="https://instagram.com/teachermomedit" target="_blank" class="btn-outline">Follow on Instagram →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand-name">The Teacher Mom <span>Edit</span></div>
+        <p class="footer-tagline">Calm systems for busy moms. Teacher-approved tools, mom-tested routines, and honest product recommendations — because your home deserves to breathe again.</p>
+        <div class="footer-social">
+          <a href="https://instagram.com/teachermomedit" target="_blank" title="Instagram">📸</a>
+          <a href="https://tiktok.com/@teachermomedit" target="_blank" title="TikTok">🎵</a>
+          <a href="#">📌</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Explore</div>
+        <ul class="footer-links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="blog/index.html">Blog</a></li>
+          <li><a href="#">Freebies</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Shop</div>
+        <ul class="footer-links">
+          <li><a href="#">Quiet Time Kit</a></li>
+          <li><a href="#">After-School Routine</a></li>
+          <li><a href="#">Mom Reset Guide</a></li>
+          <li><a href="#">Toddler Toolkit</a></li>
+          <li><a href="#">All Products</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Blog</div>
+        <ul class="footer-links">
+          <li><a href="#">Mom Hacks</a></li>
+          <li><a href="#">Toddler Life</a></li>
+          <li><a href="#">Home Systems</a></li>
+          <li><a href="#">Teacher Tips</a></li>
+          <li><a href="#">Product Reviews</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2025 The Teacher Mom Edit. Made with love and a strong cup of tea.</p>
+      <div class="footer-legal">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Disclaimer</a>
+        <a href="disclosure.html">Affiliate Disclosure</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ═══ STICKY MOBILE CTA ═══ -->
+<div class="sticky-cta">
+  <a href="#" class="btn-outline" onclick="openPopup()">Free Guide</a>
+  <a href="#shop" class="btn-primary">Shop Now →</a>
+</div>
+
+<script>
+  // Popup
+  let popupShown = false;
+  function openPopup() {
+    document.getElementById('popup').classList.add('active');
+  }
+  function closePopup() {
+    document.getElementById('popup').classList.remove('active');
+  }
+  document.getElementById('popup').addEventListener('click', function(e) {
+    if (e.target === this) closePopup();
+  });
+  // Auto-show popup after 12s
+  setTimeout(function() {
+    if (!popupShown) { openPopup(); popupShown = true; }
+  }, 12000);
+
+  // Scroll reveal
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  reveals.forEach(function(el) { observer.observe(el); });
+
+  // Blog category tabs
+  const catBtns = document.querySelectorAll('.cat-btn');
+  catBtns.forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      catBtns.forEach(function(b) { b.classList.remove('active'); });
+      this.classList.add('active');
+    });
+  });
+</script>
+</body>
+</html>

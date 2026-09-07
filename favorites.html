@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Mom Favorites | The Teacher Mom Edit</title>
+<meta name="description" content="Teacher-approved, mom-tested product recommendations. Honest picks for organization, travel toys, learning tools, snack systems, and more." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --cream: #FAF7F2; --oatmeal: #F2EDE4; --sand: #E8DFD0;
+    --sage: #8FA68A; --sage-light: #C5D5C0; --sage-dark: #5C7A58;
+    --terracotta: #C4775A; --terracotta-light: #E8C4B0; --clay: #B8957A;
+    --charcoal: #3A3530; --charcoal-mid: #6B6259; --charcoal-light: #9B9189;
+    --warm-white: #FDFBF8;
+    --serif: 'Cormorant Garamond', Georgia, serif;
+    --sans: 'Jost', system-ui, sans-serif;
+    --radius: 16px; --transition: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+  html { scroll-behavior: smooth; }
+  body { font-family: var(--sans); background: var(--warm-white); color: var(--charcoal); line-height: 1.7; overflow-x: hidden; }
+
+  nav { position: sticky; top: 0; z-index: 100; background: rgba(253,251,248,0.92); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid rgba(184,149,122,0.15); padding: 0 24px; }
+  .nav-inner { max-width: 1120px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; height: 68px; }
+  .nav-logo { font-family: var(--serif); font-size: 22px; font-weight: 500; color: var(--charcoal); text-decoration: none; letter-spacing: 0.01em; }
+  .nav-logo span { color: var(--terracotta); }
+  .nav-links { display: flex; align-items: center; gap: 32px; list-style: none; }
+  .nav-links a { font-size: 13px; font-weight: 400; letter-spacing: 0.06em; text-transform: uppercase; color: var(--charcoal-mid); text-decoration: none; transition: color 0.2s; }
+  .nav-links a:hover, .nav-links a.active { color: var(--terracotta); }
+  .nav-cta { margin-left: 16px; }
+  .btn-primary { display: inline-flex; align-items: center; gap: 8px; background: var(--charcoal); color: var(--cream); font-family: var(--sans); font-size: 13px; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; padding: 14px 28px; border-radius: 100px; border: none; cursor: pointer; text-decoration: none; transition: background var(--transition), transform 0.2s; }
+  .btn-primary:hover { background: var(--terracotta); transform: translateY(-2px); }
+  @media (max-width: 768px) { .nav-links, .nav-cta { display: none; } }
+
+  .page-hero { background: var(--cream); padding: 72px 24px 64px; text-align: center; position: relative; overflow: hidden; }
+  .page-hero::before { content: ''; position: absolute; top: -100px; right: -100px; width: 400px; height: 400px; border-radius: 50%; background: radial-gradient(circle, rgba(197,213,192,0.3) 0%, transparent 70%); pointer-events: none; }
+  .tag { display: inline-block; font-family: var(--sans); font-size: 11px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--terracotta); margin-bottom: 14px; }
+  .page-hero h1 { font-family: var(--serif); font-size: clamp(2.4rem, 5vw, 4rem); font-weight: 300; line-height: 1.15; color: var(--charcoal); margin-bottom: 16px; }
+  .page-hero h1 em { font-style: italic; color: var(--terracotta); }
+  .page-hero p { font-size: 17px; font-weight: 300; color: var(--charcoal-mid); max-width: 520px; margin: 0 auto 12px; line-height: 1.7; }
+  .affiliate-notice { display: inline-flex; align-items: center; gap: 8px; background: var(--oatmeal); border: 1px solid var(--sand); border-radius: 100px; padding: 8px 18px; font-size: 12px; font-weight: 400; color: var(--charcoal-light); margin-top: 16px; }
+
+  .filter-bar { background: var(--warm-white); border-bottom: 1px solid var(--sand); padding: 20px 24px; position: sticky; top: 68px; z-index: 90; }
+  .filter-inner { max-width: 1120px; margin: 0 auto; display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+  .filter-label { font-size: 12px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--charcoal-light); margin-right: 4px; white-space: nowrap; }
+  .cat-btn { padding: 8px 18px; border-radius: 100px; border: 1.5px solid var(--sand); background: transparent; font-family: var(--sans); font-size: 13px; font-weight: 400; color: var(--charcoal-mid); cursor: pointer; transition: all 0.2s; white-space: nowrap; }
+  .cat-btn.active, .cat-btn:hover { background: var(--charcoal); color: var(--cream); border-color: var(--charcoal); }
+
+  .main { max-width: 1120px; margin: 0 auto; padding: 64px 24px 100px; }
+  .cat-section { margin-bottom: 72px; }
+  .cat-header { display: flex; align-items: center; gap: 16px; margin-bottom: 32px; padding-bottom: 20px; border-bottom: 1px solid var(--sand); }
+  .cat-icon { font-size: 28px; }
+  .cat-title { font-family: var(--serif); font-size: 2rem; font-weight: 400; color: var(--charcoal); }
+  .cat-count { font-size: 13px; font-weight: 300; color: var(--charcoal-light); margin-left: auto; }
+
+  .prod-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
+  .prod-card { background: var(--oatmeal); border-radius: var(--radius); overflow: hidden; transition: transform var(--transition), box-shadow var(--transition); display: flex; flex-direction: column; }
+  .prod-card:hover { transform: translateY(-5px); box-shadow: 0 20px 48px rgba(58,53,48,0.10); }
+  .prod-thumb { aspect-ratio: 4/3; background: var(--sand); overflow: hidden; }
+  .prod-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .prod-body { padding: 20px; flex: 1; display: flex; flex-direction: column; }
+  .prod-name { font-family: var(--serif); font-size: 1.2rem; font-weight: 500; color: var(--charcoal); margin-bottom: 8px; line-height: 1.3; }
+  .prod-note { font-size: 14px; font-weight: 300; color: var(--charcoal-mid); line-height: 1.65; flex: 1; margin-bottom: 16px; }
+  .prod-footer { display: flex; align-items: center; justify-content: space-between; margin-top: auto; gap: 10px; }
+  .prod-tag { display: inline-flex; align-items: center; gap: 6px; background: var(--sage-light); border-radius: 100px; padding: 4px 12px; font-size: 11px; font-weight: 500; color: var(--sage-dark); letter-spacing: 0.06em; text-transform: uppercase; white-space: nowrap; }
+  .prod-link { display: inline-flex; align-items: center; gap: 6px; background: var(--charcoal); color: var(--cream); font-family: var(--sans); font-size: 12px; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; padding: 10px 18px; border-radius: 100px; text-decoration: none; transition: background 0.2s, transform 0.2s; white-space: nowrap; }
+  .prod-link:hover { background: var(--terracotta); transform: translateY(-1px); }
+
+  .empty-cat { background: var(--oatmeal); border-radius: var(--radius); padding: 40px; text-align: center; color: var(--charcoal-light); font-size: 14px; font-weight: 300; font-style: italic; }
+  .empty-cat span { display: block; font-size: 28px; margin-bottom: 10px; }
+
+  footer { background: var(--charcoal); color: var(--cream); padding: 40px 24px; text-align: center; }
+  .footer-logo { font-family: var(--serif); font-size: 20px; font-weight: 400; margin-bottom: 8px; }
+  .footer-logo span { color: var(--terracotta-light); }
+  .footer-links-row { display: flex; gap: 24px; justify-content: center; flex-wrap: wrap; margin: 16px 0; }
+  .footer-links-row a { font-size: 13px; font-weight: 300; color: rgba(250,247,242,0.6); text-decoration: none; transition: color 0.2s; }
+  .footer-links-row a:hover { color: var(--cream); }
+  .footer-copy { font-size: 12px; color: rgba(250,247,242,0.35); margin-top: 8px; }
+
+  .sticky-cta { display: none; position: fixed; bottom: 0; left: 0; right: 0; z-index: 90; background: var(--warm-white); border-top: 1px solid var(--sand); padding: 14px 20px; box-shadow: 0 -8px 24px rgba(58,53,48,0.08); }
+  @media (max-width: 768px) {
+    .sticky-cta { display: flex; gap: 10px; }
+    .sticky-cta a { flex: 1; text-align: center; justify-content: center; font-size: 12px; padding: 12px 16px; }
+    body { padding-bottom: 80px; }
+    .filter-bar { top: 0; }
+  }
+
+  .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">The Teacher Mom <span>Edit</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">← Back to Home</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="teacher-mom-edit (3).html#systems">Systems</a></li>
+      <li><a href="quiet-truths.html">Quiet Truths</a></li>
+      <li><a href="index.html#shop">Shop</a></li>
+      <li><a href="favorites.html" class="active">Favorites</a></li>
+      <li><a href="blog/index.html">Blog</a></li>
+      <li><a href="freebies.html">Freebies</a></li>
+    </ul>
+    <a href="index.html#freebies" class="btn-primary nav-cta">Free Guide</a>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <span class="tag">Amazon Favorites</span>
+  <h1>Things I genuinely <em>love</em></h1>
+  <p>No fluff, no paid promotions I don't believe in. Just the products I reach for in my own home — tested by a real mom and a working teacher.</p>
+  <div class="affiliate-notice">🔗 Some links are affiliate links — I earn a small commission at no cost to you. I only share things I actually use.</div>
+</div>
+
+<div class="filter-bar">
+  <div class="filter-inner">
+    <span class="filter-label">Browse:</span>
+    <button class="cat-btn active" onclick="filterCat('all', this)">All</button>
+    <button class="cat-btn" onclick="filterCat('organization', this)">Organization</button>
+    <button class="cat-btn" onclick="filterCat('travel-toys', this)">Travel Toys</button>
+    <button class="cat-btn" onclick="filterCat('quiet-bins', this)">Quiet Bins</button>
+    <button class="cat-btn" onclick="filterCat('learning-tools', this)">Learning Tools</button>
+    <button class="cat-btn" onclick="filterCat('snack-systems', this)">Snack Systems</button>
+    <button class="cat-btn" onclick="filterCat('mom-wellness', this)">Mom Wellness</button>
+  </div>
+</div>
+
+<main class="main">
+
+  <section class="cat-section reveal" data-cat="organization" id="organization">
+    <div class="cat-header">
+      <span class="cat-icon">🗂</span>
+      <h2 class="cat-title">Organization</h2>
+      <span class="cat-count">2 picks</span>
+    </div>
+    <div class="prod-grid">
+      <div class="prod-card">
+        <div class="prod-thumb">
+          <img src="https://m.media-amazon.com/images/I/81sg53CmSBL._AC_SL1500_.jpg" alt="SHAROM felt diaper caddy organizer with pockets for diapers, wipes, and baby extras" width="800" height="600" loading="lazy" decoding="async" />
+        </div>
+        <div class="prod-body">
+          <div class="prod-name">Diaper Caddy Organizer</div>
+          <p class="prod-note">A game-changer for keeping everything within reach — diapers, wipes, creams — without running to another room. Works beautifully on a changing table, nightstand, or shelf. One of those things you didn't know you needed until you have it.</p>
+          <div class="prod-footer">
+            <span class="prod-tag">⭐ Teacher Pick</span>
+            <a href="https://amzn.to/3OWvedP" target="_blank" rel="noopener noreferrer" class="prod-link">See on Amazon ↗</a>
+          </div>
+        </div>
+      </div>
+      <div class="prod-card">
+        <div class="prod-thumb">
+          <img src="https://m.media-amazon.com/images/I/61ZQRF-rbOL._AC_SL1500_.jpg" alt="White silicone marker holders that keep broad-tip markers with their caps" width="800" height="600" loading="lazy" decoding="async" />
+        </div>
+        <div class="prod-body">
+          <div class="prod-name">Silicone Marker Holders</div>
+          <p class="prod-note">These keep every marker with its own cap, so you're not picking lids up off the floor after every colouring session. An empty slot also tells you exactly which marker walked off — no more mystery shortages mid-project.</p>
+          <div class="prod-footer">
+            <span class="prod-tag">⭐ Teacher Pick</span>
+            <a href="https://amzn.to/4xkHdD9" target="_blank" rel="noopener noreferrer" class="prod-link">See on Amazon ↗</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cat-section reveal" data-cat="travel-toys" id="travel-toys">
+    <div class="cat-header">
+      <span class="cat-icon">🚗</span>
+      <h2 class="cat-title">Travel Toys</h2>
+      <span class="cat-count">1 pick</span>
+    </div>
+    <div class="prod-grid">
+      <div class="prod-card">
+        <div class="prod-thumb">
+          <img src="https://m.media-amazon.com/images/I/71FIJWtTIbL._AC_SL1500_.jpg" alt="MAGNA-TILES microMAGS 26-piece travel magnetic building set in a tin" width="800" height="600" loading="lazy" decoding="async" />
+        </div>
+        <div class="prod-body">
+          <div class="prod-name">Magna-Tiles Travel Set</div>
+          <p class="prod-note">Magnetic tiles in a compact case — perfect for restaurants, flights, and hotel rooms. Open-ended building keeps little hands busy without a million loose pieces, and it packs away fast when you need to move.</p>
+          <div class="prod-footer">
+            <span class="prod-tag">⭐ Teacher Pick</span>
+            <a href="https://amzn.to/4udKCl6" target="_blank" rel="noopener noreferrer" class="prod-link">See on Amazon ↗</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cat-section reveal" data-cat="quiet-bins" id="quiet-bins">
+    <div class="cat-header">
+      <span class="cat-icon">🧸</span>
+      <h2 class="cat-title">Quiet Bins</h2>
+      <span class="cat-count">Coming soon</span>
+    </div>
+    <div class="prod-grid">
+      <div class="empty-cat"><span>🌿</span>Picks coming soon — check back shortly!</div>
+    </div>
+  </section>
+
+  <section class="cat-section reveal" data-cat="learning-tools" id="learning-tools">
+    <div class="cat-header">
+      <span class="cat-icon">📚</span>
+      <h2 class="cat-title">Learning Tools</h2>
+      <span class="cat-count">1 pick</span>
+    </div>
+    <div class="prod-grid">
+      <div class="prod-card">
+        <div class="prod-thumb">
+          <img src="https://m.media-amazon.com/images/I/81yo0fylQbL._AC_SL1500_.jpg" alt="Melissa and Doug Race Around the World 48-piece floor puzzle with wind-up cars" width="800" height="600" loading="lazy" decoding="async" />
+        </div>
+        <div class="prod-body">
+          <div class="prod-name">Melissa &amp; Doug Race Around the World Floor Puzzle</div>
+          <p class="prod-note">A big 48-piece floor puzzle with a built-in track and two wind-up cars — kids build the world, then race through it. The box includes a landmark key for early geography chat, and it’s all screen-free problem-solving and fine-motor work disguised as pure fun. Great for ages 4+.</p>
+          <div class="prod-footer">
+            <span class="prod-tag">⭐ Teacher Pick</span>
+            <a href="https://amzn.to/4fhhuoO" target="_blank" rel="noopener noreferrer" class="prod-link">See on Amazon ↗</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cat-section reveal" data-cat="snack-systems" id="snack-systems">
+    <div class="cat-header">
+      <span class="cat-icon">🍎</span>
+      <h2 class="cat-title">Snack Systems</h2>
+      <span class="cat-count">2 picks</span>
+    </div>
+    <div class="prod-grid">
+      <div class="prod-card">
+        <div class="prod-thumb">
+          <img src="https://m.media-amazon.com/images/I/81gLPl5pbnL._AC_SL1500_.jpg" alt="8-compartment snackle box with lid, handle, and removable snack cups" width="800" height="600" loading="lazy" decoding="async" />
+        </div>
+        <div class="prod-body">
+          <div class="prod-name">8-Compartment Snackle Box</div>
+          <p class="prod-note">This is the on-the-go snack solution I wish I'd found sooner. Eight compartments means you can pack exactly what your kids will actually eat — no mystery bags, no meltdowns over mixed-up foods. Perfect for car rides, outings, park days, or just keeping snack time simple at home.</p>
+          <div class="prod-footer">
+            <span class="prod-tag">⭐ Teacher Pick</span>
+            <a href="https://amzn.to/3QFndup" target="_blank" rel="noopener noreferrer" class="prod-link">See on Amazon ↗</a>
+          </div>
+        </div>
+      </div>
+      <div class="prod-card">
+        <div class="prod-thumb">
+          <img src="https://m.media-amazon.com/images/I/71XU5Dsr%2BML._AC_SL1500_.jpg" alt="OmieBox kids insulated bento lunch box in pink berry with thermos insert" width="800" height="600" loading="lazy" decoding="async" />
+        </div>
+        <div class="prod-body">
+          <div class="prod-name">OmieBox Insulated Bento Lunch Box</div>
+          <p class="prod-note">When you need a real lunch — not just loose snacks — this box keeps hot food warm and cold food cool in one sturdy bento. Fewer containers to juggle, less “my sandwich got squished” drama, and it’s built for daily school drops without falling apart.</p>
+          <div class="prod-footer">
+            <span class="prod-tag">⭐ Teacher Pick</span>
+            <a href="https://amzn.to/4ffp2sc" target="_blank" rel="noopener noreferrer" class="prod-link">See on Amazon ↗</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cat-section reveal" data-cat="mom-wellness" id="mom-wellness">
+    <div class="cat-header">
+      <span class="cat-icon">🌸</span>
+      <h2 class="cat-title">Mom Wellness</h2>
+      <span class="cat-count">Coming soon</span>
+    </div>
+    <div class="prod-grid">
+      <div class="empty-cat"><span>☕</span>Picks coming soon — check back shortly!</div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-logo">The Teacher Mom <span>Edit</span></div>
+  <div class="footer-links-row">
+    <a href="index.html">← Back to Home</a>
+    <a href="index.html#shop">Shop</a>
+    <a href="favorites.html">Favorites</a>
+    <a href="blog/index.html">Blog</a>
+    <a href="freebies.html">Freebies</a>
+    <a href="https://instagram.com/teachermomedit" target="_blank">Instagram</a>
+    <a href="https://tiktok.com/@teachermomedit" target="_blank">TikTok</a>
+  </div>
+  <p class="footer-copy">© 2025 The Teacher Mom Edit · Affiliate Disclosure: Some links earn a small commission at no cost to you.</p>
+</footer>
+
+<div class="sticky-cta">
+  <a href="index.html#freebies" class="btn-primary">Get Free Guide →</a>
+</div>
+
+<script>
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+  }, { threshold: 0.1 });
+  reveals.forEach(el => observer.observe(el));
+
+  function filterCat(cat, btn) {
+    document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    document.querySelectorAll('.cat-section').forEach(section => {
+      section.style.display = (cat === 'all' || section.dataset.cat === cat) ? '' : 'none';
+    });
+  }
+</script>
+</body>
+</html>

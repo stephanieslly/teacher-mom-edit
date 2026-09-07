@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Shop | Teacher Mom Edit</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: #FAF7F2;
+      color: #1C1C1C;
+      font-family: "Lato", sans-serif;
+      line-height: 1.5;
+      padding: 48px 20px 64px;
+    }
+
+    .container {
+      max-width: 1180px;
+      margin: 0 auto;
+    }
+
+    .page-header {
+      text-align: center;
+      margin-bottom: 42px;
+    }
+
+    .page-header h1 {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(2.4rem, 5vw, 3.4rem);
+      font-weight: 600;
+      color: #1C1C1C;
+      margin-bottom: 10px;
+    }
+
+    .page-header p {
+      font-size: 1rem;
+      color: #1C1C1C;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 24px;
+    }
+
+    .product-card {
+      background: #FAF7F2;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(28, 28, 28, 0.08);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      min-height: 100%;
+    }
+
+    .product-image {
+      aspect-ratio: 3 / 4;
+      width: 100%;
+      object-fit: cover;
+      display: block;
+      background: #FAF7F2;
+    }
+
+    .coming-soon-image {
+      aspect-ratio: 3 / 4;
+      width: 100%;
+      background: #FAF7F2;
+      border: 2px dashed #4A6741;
+      border-radius: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .coming-soon-inner {
+      display: grid;
+      gap: 8px;
+      justify-items: center;
+    }
+
+    .coming-soon-emoji {
+      font-size: 1.45rem;
+      line-height: 1;
+    }
+
+    .coming-soon-title {
+      font-family: "Playfair Display", serif;
+      font-size: 1.35rem;
+      color: #4A6741;
+      font-weight: 600;
+      line-height: 1.2;
+    }
+
+    .coming-soon-name {
+      font-size: 0.92rem;
+      color: #1C1C1C;
+      line-height: 1.35;
+    }
+
+    .product-body {
+      display: grid;
+      gap: 10px;
+      padding: 16px 16px 18px;
+      height: 100%;
+    }
+
+    .product-title {
+      font-family: "Playfair Display", serif;
+      font-size: 1.22rem;
+      font-weight: 600;
+      line-height: 1.25;
+      color: #1C1C1C;
+    }
+
+    .product-description {
+      font-size: 0.96rem;
+      color: #1C1C1C;
+      min-height: 2.7em;
+    }
+
+    .download-btn {
+      margin-top: auto;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      text-decoration: none;
+      border: none;
+      border-radius: 999px;
+      padding: 11px 14px;
+      font-family: "Lato", sans-serif;
+      font-size: 0.9rem;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+      background: #4A6741;
+      color: #FAF7F2;
+      cursor: pointer;
+    }
+
+    .download-btn.soon {
+      background: #999999;
+      opacity: 0.5;
+      cursor: default;
+      pointer-events: none;
+    }
+
+    @media (max-width: 768px) {
+      body { padding: 36px 16px 52px; }
+      .product-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+      }
+      .product-body { padding: 14px; }
+      .product-title { font-size: 1.05rem; }
+      .product-description { font-size: 0.9rem; }
+    }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <header class="page-header">
+      <h1>The Shop</h1>
+      <p>Teacher-approved, mom-tested digital downloads — instant access, no fuss.</p>
+    </header>
+
+    <section class="product-grid">
+      <article class="product-card">
+        <img class="product-image" src="growth_mindset_phrases_cheat_sheet_gumroad_thumbnail.png" alt="Growth Mindset Phrases Cheat Sheet cover" />
+        <div class="product-body">
+          <h2 class="product-title">Growth Mindset Phrases Cheat Sheet</h2>
+          <p class="product-description">Simple swaps that build resilience and confidence</p>
+          <a class="download-btn" href="#">Instant Download</a>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <img class="product-image" src="kindergarten_readiness_checklist_gumroad_thumbnail.png" alt="Kindergarten Readiness Checklist cover" />
+        <div class="product-body">
+          <h2 class="product-title">Kindergarten Readiness Checklist</h2>
+          <p class="product-description">What educators actually look for before September</p>
+          <a class="download-btn" href="#">Instant Download</a>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <img class="product-image" src="screen_free_family_activity_list_gumroad_thumbnail.png" alt="Screen-Free Family Activity List cover" />
+        <div class="product-body">
+          <h2 class="product-title">Screen-Free Family Activity List</h2>
+          <p class="product-description">Connect, play, and recharge without a screen</p>
+          <a class="download-btn" href="#">Instant Download</a>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <img class="product-image" src="after_school_reset_guide_gumroad_thumbnail.png" alt="After School Reset Guide cover" />
+        <div class="product-body">
+          <h2 class="product-title">After School Reset Guide</h2>
+          <p class="product-description">Help your child transition calmly from school to home</p>
+          <a class="download-btn" href="#">Instant Download</a>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <img class="product-image" src="back_to_school_anxiety_guide_gumroad_thumbnail.png" alt="Back to School Anxiety Guide cover" />
+        <div class="product-body">
+          <h2 class="product-title">Back to School Anxiety Guide</h2>
+          <p class="product-description">What to look for, what to say, and when to get support</p>
+          <a class="download-btn" href="#">Instant Download</a>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <img class="product-image" src="bedtime_connection_ritual_guide_gumroad_thumbnail.png" alt="Bedtime Connection Ritual Guide cover" />
+        <div class="product-body">
+          <h2 class="product-title">Bedtime Connection Ritual Guide</h2>
+          <p class="product-description">5 minutes before lights out to end the day connected</p>
+          <a class="download-btn" href="#">Instant Download</a>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <img class="product-image" src="calm_school_morning_checklist_gumroad_thumbnail.png" alt="Calm School Morning Checklist cover" />
+        <div class="product-body">
+          <h2 class="product-title">Calm School Morning Checklist</h2>
+          <p class="product-description">Simple routines for smoother, more peaceful mornings</p>
+          <a class="download-btn" href="#">Instant Download</a>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <img class="product-image" src="conversation_starters_gumroad_thumbnail.png" alt="Conversation Starters cover" />
+        <div class="product-body">
+          <h2 class="product-title">Conversation Starters</h2>
+          <p class="product-description">Questions beyond 'How was school?'</p>
+          <a class="download-btn" href="#">Instant Download</a>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <img class="product-image" src="fine_motor_skills_activity_list_gumroad_thumbnail.png" alt="Fine Motor Skills Activity List cover" />
+        <div class="product-body">
+          <h2 class="product-title">Fine Motor Skills Activity List</h2>
+          <p class="product-description">Everyday activities that build hand strength at home</p>
+          <a class="download-btn" href="#">Instant Download</a>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <img class="product-image" src="frustration_tolerance_activity_guide_gumroad_thumbnail.png" alt="Frustration Tolerance Activity Guide cover" />
+        <div class="product-body">
+          <h2 class="product-title">Frustration Tolerance Activity Guide</h2>
+          <p class="product-description">Simple activities to build resilience at home</p>
+          <a class="download-btn" href="#">Instant Download</a>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <div class="coming-soon-image">
+          <div class="coming-soon-inner">
+            <div class="coming-soon-emoji">🌿</div>
+            <div class="coming-soon-title">Coming Soon</div>
+            <div class="coming-soon-name">7 Calm Tools for Big Feelings (Guide)</div>
+          </div>
+        </div>
+        <div class="product-body">
+          <h2 class="product-title">7 Calm Tools for Big Feelings (Guide)</h2>
+          <p class="product-description">More practical supports are on the way</p>
+          <span class="download-btn soon">Instant Download</span>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <div class="coming-soon-image">
+          <div class="coming-soon-inner">
+            <div class="coming-soon-emoji">🌿</div>
+            <div class="coming-soon-title">Coming Soon</div>
+            <div class="coming-soon-name">Kindergarten Readiness Workbook</div>
+          </div>
+        </div>
+        <div class="product-body">
+          <h2 class="product-title">Kindergarten Readiness Workbook</h2>
+          <p class="product-description">More practical supports are on the way</p>
+          <span class="download-btn soon">Instant Download</span>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <div class="coming-soon-image">
+          <div class="coming-soon-inner">
+            <div class="coming-soon-emoji">🌿</div>
+            <div class="coming-soon-title">Coming Soon</div>
+            <div class="coming-soon-name">Printable Quote Bundle</div>
+          </div>
+        </div>
+        <div class="product-body">
+          <h2 class="product-title">Printable Quote Bundle</h2>
+          <p class="product-description">More practical supports are on the way</p>
+          <span class="download-btn soon">Instant Download</span>
+        </div>
+      </article>
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Free Guides — The Teacher Mom Edit</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --cream: #FAF7F2;
+      --oatmeal: #F2EDE4;
+      --sage: #8FA68A;
+      --terracotta: #C4775A;
+      --charcoal: #3A3530;
+      --charcoal-dark: #2a2520;
+    }
+
+    body {
+      background: var(--cream);
+      color: var(--charcoal);
+      font-family: 'Jost', sans-serif;
+      font-weight: 400;
+      line-height: 1.6;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--cream);
+      border-bottom: 1px solid rgba(58,53,48,0.1);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 48px;
+      height: 64px;
+    }
+
+    .nav-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--charcoal);
+      text-decoration: none;
+      letter-spacing: 0.01em;
+    }
+
+    .nav-logo span {
+      color: var(--terracotta);
+      font-style: italic;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 36px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-family: 'Jost', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--charcoal);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--sage); }
+
+    .nav-cta {
+      background: var(--charcoal);
+      color: #fff !important;
+      padding: 10px 20px;
+      border-radius: 100px;
+      font-size: 0.72rem !important;
+      letter-spacing: 0.1em;
+      transition: background 0.2s !important;
+    }
+
+    .nav-cta:hover { background: var(--terracotta) !important; color: #fff !important; }
+
+    /* ── HERO ── */
+    .thank-you-hero {
+      background: var(--cream);
+      padding: 72px 48px 48px;
+      max-width: 760px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .thank-you-hero .hero-tag {
+      font-family: 'Jost', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--sage);
+      display: block;
+      margin-bottom: 16px;
+    }
+
+    .thank-you-hero h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.4rem, 5vw, 3.6rem);
+      font-weight: 600;
+      color: var(--charcoal);
+      line-height: 1.15;
+      margin-bottom: 16px;
+    }
+
+    .thank-you-hero p {
+      font-size: 1rem;
+      color: #6b6460;
+      max-width: 520px;
+      margin: 0 auto;
+    }
+
+    /* ── DOWNLOADS ── */
+    .downloads-section {
+      padding: 16px 48px 96px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .downloads-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 24px;
+    }
+
+    .download-card {
+      background: #fff;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 2px 12px rgba(58,53,48,0.07);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .download-card img {
+      width: 100%;
+      aspect-ratio: 4/3;
+      object-fit: cover;
+      display: block;
+    }
+
+    .download-card-body {
+      padding: 18px 20px 22px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .download-card-body h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.12rem;
+      font-weight: 600;
+      color: var(--charcoal);
+      margin-bottom: 6px;
+      line-height: 1.3;
+    }
+
+    .download-card-body p {
+      font-size: 0.82rem;
+      color: #7a7470;
+      line-height: 1.5;
+      margin-bottom: 16px;
+      flex: 1;
+    }
+
+    .download-btn {
+      display: block;
+      background: var(--sage);
+      color: #fff;
+      font-family: 'Jost', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 11px 18px;
+      border-radius: 100px;
+      text-decoration: none;
+      text-align: center;
+      transition: background 0.2s;
+      width: 100%;
+    }
+
+    .download-btn:hover { background: var(--terracotta); }
+
+    /* ── BOTTOM CTA ── */
+    .bottom-cta {
+      text-align: center;
+      padding: 0 48px 96px;
+    }
+
+    .bottom-cta p {
+      font-size: 0.9rem;
+      color: #7a7470;
+      margin-bottom: 16px;
+    }
+
+    .bottom-cta a {
+      display: inline-block;
+      background: var(--charcoal);
+      color: #fff;
+      font-family: 'Jost', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 12px 28px;
+      border-radius: 100px;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+
+    .bottom-cta a:hover { background: var(--sage); }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--charcoal-dark);
+      color: rgba(255,255,255,0.75);
+      padding: 64px 48px 32px;
+    }
+
+    .footer-top {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr 1fr;
+      gap: 48px;
+      padding-bottom: 48px;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .footer-brand .footer-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 12px;
+      display: block;
+    }
+
+    .footer-brand .footer-logo span {
+      color: var(--terracotta);
+      font-style: italic;
+    }
+
+    .footer-brand p {
+      font-size: 0.82rem;
+      line-height: 1.7;
+      color: rgba(255,255,255,0.6);
+      max-width: 240px;
+    }
+
+    .footer-col h4 {
+      font-family: 'Jost', sans-serif;
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.45);
+      margin-bottom: 16px;
+    }
+
+    .footer-col ul { list-style: none; }
+    .footer-col ul li { margin-bottom: 10px; }
+
+    .footer-col ul li a {
+      color: rgba(255,255,255,0.7);
+      text-decoration: none;
+      font-size: 0.85rem;
+      transition: color 0.2s;
+    }
+
+    .footer-col ul li a:hover { color: var(--terracotta); }
+
+    .footer-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 28px;
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.4);
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .footer-bottom a {
+      color: rgba(255,255,255,0.4);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .footer-bottom a:hover { color: rgba(255,255,255,0.7); }
+    .footer-legal { display: flex; gap: 24px; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 768px) {
+      nav { padding: 0 20px; }
+      .nav-links { gap: 20px; }
+      .nav-links li:not(:last-child):not(:nth-last-child(2)) { display: none; }
+
+      .thank-you-hero { padding: 48px 24px 32px; }
+      .downloads-section { padding: 40px 24px 64px; }
+      .bottom-cta { padding: 0 24px 64px; }
+
+      .footer-top { grid-template-columns: 1fr 1fr; gap: 32px; }
+      .footer-brand { grid-column: 1 / -1; }
+      footer { padding: 48px 24px 24px; }
+    }
+
+    @media (max-width: 480px) {
+      .downloads-grid { grid-template-columns: 1fr; }
+      .footer-top { grid-template-columns: 1fr; }
+      .nav-links li:not(:last-child) { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="teacher-mom-edit.html" class="nav-logo">The Teacher Mom <span>Edit</span></a>
+    <ul class="nav-links">
+      <li><a href="about.html">About</a></li>
+      <li><a href="teacher-mom-edit (3).html#systems">Systems</a></li>
+      <li><a href="quiet-truths.html">Quiet Truths</a></li>
+      <li><a href="teacher-mom-edit.html#shop">Shop</a></li>
+      <li><a href="favorites.html">Favorites</a></li>
+      <li><a href="blog/index.html">Blog</a></li>
+      <li><a href="freebies.html">Freebies</a></li>
+      <li><a href="freebies.html" class="nav-cta">Free Guide</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="thank-you-hero">
+    <span class="hero-tag">You're in!</span>
+    <h1>Here are your 10 free guides 🌿</h1>
+    <p>Download any or all — they're yours to keep.</p>
+  </section>
+
+  <!-- DOWNLOADS -->
+  <section class="downloads-section">
+    <div class="downloads-grid">
+
+      <div class="download-card">
+        <img src="kindergarten_readiness_checklist_thumbnail.png" alt="Kindergarten Readiness Checklist" />
+        <div class="download-card-body">
+          <h3>Kindergarten Readiness Checklist</h3>
+          <p>What educators actually look for before September — beyond letters and numbers.</p>
+          <a href="Kindergarten_Readiness_Checklist.pdf" target="_blank" class="download-btn">⬇ Download</a>
+        </div>
+      </div>
+
+      <div class="download-card">
+        <img src="calm_school_morning_checklist_thumbnail.png" alt="Calm School Morning Checklist" />
+        <div class="download-card-body">
+          <h3>Calm School Morning Checklist</h3>
+          <p>A predictable, calming routine that makes school mornings easier for everyone.</p>
+          <a href="Calm_School_Morning_Checklist.pdf" target="_blank" class="download-btn">⬇ Download</a>
+        </div>
+      </div>
+
+      <div class="download-card">
+        <img src="after_school_reset_guide_thumbnail.png" alt="After School Reset Guide" />
+        <div class="download-card-body">
+          <h3>After School Reset Guide</h3>
+          <p>A simple wind-down routine that prevents the after-school meltdown.</p>
+          <a href="After_School_Reset_Guide.pdf" target="_blank" class="download-btn">⬇ Download</a>
+        </div>
+      </div>
+
+      <div class="download-card">
+        <img src="bedtime_connection_ritual_guide_thumbnail.png" alt="Bedtime Connection Ritual Guide" />
+        <div class="download-card-body">
+          <h3>Bedtime Connection Ritual Guide</h3>
+          <p>5-minute evening habits that calm kids and strengthen your bond.</p>
+          <a href="Bedtime_Connection_Ritual_Guide.pdf" target="_blank" class="download-btn">⬇ Download</a>
+        </div>
+      </div>
+
+      <div class="download-card">
+        <img src="growth_mindset_phrases_cheat_sheet_thumbnail.png" alt="Growth Mindset Phrases Cheat Sheet" />
+        <div class="download-card-body">
+          <h3>Growth Mindset Phrases Cheat Sheet</h3>
+          <p>Simple word swaps for the phrases we say every day without thinking.</p>
+          <a href="Growth_Mindset_Phrases_Cheat_Sheet.pdf" target="_blank" class="download-btn">⬇ Download</a>
+        </div>
+      </div>
+
+      <div class="download-card">
+        <img src="frustration_tolerance_activity_guide_thumbnail.png" alt="Frustration Tolerance Activity Guide" />
+        <div class="download-card-body">
+          <h3>Frustration Tolerance Activity Guide</h3>
+          <p>Easy at-home activities that build resilience and independence in young kids.</p>
+          <a href="Frustration_Tolerance_Activity_Guide.pdf" target="_blank" class="download-btn">⬇ Download</a>
+        </div>
+      </div>
+
+      <div class="download-card">
+        <img src="conversation_starters_thumbnail.png" alt="Conversation Starter Guide" />
+        <div class="download-card-body">
+          <h3>Conversation Starter Guide</h3>
+          <p>Fresh questions beyond "how was school" — for car rides, dinner, and bedtime.</p>
+          <a href="Conversation_Starters.pdf" target="_blank" class="download-btn">⬇ Download</a>
+        </div>
+      </div>
+
+      <div class="download-card">
+        <img src="fine_motor_skills_activity_list_thumbnail.png" alt="Fine Motor Skills Activity List" />
+        <div class="download-card-body">
+          <h3>Fine Motor Skills Activity List</h3>
+          <p>Easy home activities that build pencil grip and hand strength before school.</p>
+          <a href="Fine_Motor_Skills_Activity_List.pdf" target="_blank" class="download-btn">⬇ Download</a>
+        </div>
+      </div>
+
+      <div class="download-card">
+        <img src="back_to_school_anxiety_guide_thumbnail.png" alt="Back to School Anxiety Guide" />
+        <div class="download-card-body">
+          <h3>Back to School Anxiety Guide</h3>
+          <p>How to prepare your child emotionally before the first day of school.</p>
+          <a href="Back_to_School_Anxiety_Guide.pdf" target="_blank" class="download-btn">⬇ Download</a>
+        </div>
+      </div>
+
+      <div class="download-card">
+        <img src="screen_free_family_activity_list_thumbnail.png" alt="Screen-Free Family Activity List" />
+        <div class="download-card-body">
+          <h3>Screen-Free Family Activity List</h3>
+          <p>Fun games and activities that build real classroom skills — no screens needed.</p>
+          <a href="Screen_Free_Family_Activity_List.pdf" target="_blank" class="download-btn">⬇ Download</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- BOTTOM CTA -->
+  <div class="bottom-cta">
+    <p>Want to explore more resources?</p>
+    <a href="teacher-mom-edit.html">Browse more resources →</a>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-top">
+      <div class="footer-brand">
+        <span class="footer-logo">The Teacher Mom <span>Edit</span></span>
+        <p>Calm systems for busy moms. Teacher-approved tools, mom-tested routines, and honest product recommendations — because your home deserves to breathe again.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="teacher-mom-edit.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="blog/index.html">Blog</a></li>
+          <li><a href="freebies.html">Freebies</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Shop</h4>
+        <ul>
+          <li><a href="#">Quiet Time Kit</a></li>
+          <li><a href="#">After-School Routine</a></li>
+          <li><a href="#">Mom Reset Guide</a></li>
+          <li><a href="#">Toddler Toolkit</a></li>
+          <li><a href="#">All Products</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Blog</h4>
+        <ul>
+          <li><a href="#">Mom Hacks</a></li>
+          <li><a href="#">Toddler Life</a></li>
+          <li><a href="#">Home Systems</a></li>
+          <li><a href="#">Teacher Tips</a></li>
+          <li><a href="#">Product Reviews</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 The Teacher Mom Edit. Made with love and a strong cup of tea.</span>
+      <div class="footer-legal">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Disclaimer</a>
+        <a href="disclosure.html">Affiliate Disclosure</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
